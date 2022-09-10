@@ -1,0 +1,19 @@
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.exe
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.deps.json
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.runtimeconfig.json
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.runtimeconfig.dev.json
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.pdb
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.csproj.AssemblyReference.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.BillForm.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.Form1.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.csproj.GenerateResource.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.AssemblyInfoInputs.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.AssemblyInfo.cs
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.csproj.CoreCompileInputs.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.pdb
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.genruntimeconfig.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.Properties.Resources.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.PrintView.resources
