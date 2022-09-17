@@ -51,29 +51,29 @@ namespace Yess_Express___Desktop_App
 
         private void PrintView_Load(object sender, EventArgs e)
         {
-            /*labelTrackingNo.Text = tracking_no;
+            labelTrackingNo.Text = tracking_no;
             labelSenderName.Text = senderName;
             labelSenderPhone.Text = senderPhone;
-            labelShipperCompnyNameAndAddress.Text = senderCompanyNameAndAddress;
-            labelShipperSignedDate.Text = senderSendDate;
-            labelExpressReceiverName.Text = yesExpressReceivedPerson;
-            labelExpressReceivedDateTime.Text = yesExpressReceivedDateTime;
+            labelSenderCompanyName.Text = senderCompanyNameAndAddress;
+            labelSenderDate.Text = senderSendDate;
+            labelReceivedYesExpress.Text = yesExpressReceivedPerson;
+            labelYesExpressDateTime.Text = yesExpressReceivedDateTime;
             labelKillo.Text = killo;
             labelGram.Text = gram;
-            labelForVolum.Text = shipmentVolume;
-            labelForLength.Text = shipmentLength;
-            labelForWidth.Text = shipmentWidth;
-            labelForHeight.Text = shipmentHeight;
-            labelGoodsDescription.Text = descriptionOfGoods;
+            labelVolum.Text = shipmentVolume;
+            labelLength.Text = shipmentLength;
+            labelWidth.Text = shipmentWidth;
+            labelHeight.Text = shipmentHeight;
+            labelDescriptionOfGoods.Text = descriptionOfGoods;
             labelConsigneeContactPerson.Text = consigneePerson;
             labelConsigneePhone.Text = consigneePhone;
-            labelConsigneeCompnayNameAddress.Text = consigneeCompanyNameAndAddress;
+            labelConsigneeCompanyName.Text = consigneeCompanyNameAndAddress;
             labelReceiverName.Text = receiverName;
-            labelReciverSignedDateTime.Text = receivedDateTime;
+            labelReceiverDateTime.Text = receivedDateTime;
             labelServiceType.Text = receiverServiceType;
             labelAmountReceived.Text = amountReceived;
             labelPaymentMethod.Text = paymentMethod;
-            labelSpecialInstructions.Text = specialInstruction;*/
+            labelSpecialInstructions.Text = specialInstruction;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
