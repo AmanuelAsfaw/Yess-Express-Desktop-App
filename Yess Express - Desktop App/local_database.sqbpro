@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Amanu/source/repos/Yess Express - Desktop App/Yess Express - Desktop App/local_database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4332"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainBills"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">insert into Bills (tracking_no,sender_name, sender_phone, sender_company_name_address, shipper_signed_date, 
+	yes_express_receiver, yes_express_received_datetime, item_killo, item_gram, item_length, item_width, item_height, item_volum, 
+	description_of_goods, consignee_contact_person, consignee_phone, consignee_company_name_address, 
+	consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions)
+	values(1,'amna','2342','asdf adf','Monday, September 19, 2022',
+	'nlo','Thursday, September 15, 2022',22,11,10,9,8,720,
+	'uerty\r\nfghhhhhhhj','234wre','63241','asdf zxcvx',
+	'Monday, September 19, 2022','rece name','General Domestics',22,'Check','spec\r\ninstructin')
+	
+insert into Bills (tracking_no,sender_name, sender_phone, sender_company_name_address, shipper_signed_date, 
+	yes_express_receiver, yes_express_received_datetime, item_killo, item_gram, item_length, item_width, item_height, item_volum, 
+	description_of_goods, consignee_contact_person,consignee_phone, consignee_company_name_address, 
+	consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions) 
+	values(2,'sdfg','54364','fgdv','Monday, September 19, 2022',
+	'sdfg','Monday, September 19, 2022',34,3,3,3,3,27,
+	'fgwer','cv1234','234','trqwer',
+	'Monday, September 19, 2022','dfg','General Domestics',5,'Check','oio df')
+	
+INSERT INTO Bills(tracking_no, sender_name, sender_phone, sender_company_name_address)
+
+SELECT * FROM Bills
+
+SELECT name FROM sqlite_schema
+WHERE type='table'
+ORDER BY name;</sql><current_tab id="0"/></tab_sql></sqlb_project>

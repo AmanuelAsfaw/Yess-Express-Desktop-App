@@ -193,6 +193,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxHeight.Size = new System.Drawing.Size(199, 27);
             this.textBoxHeight.TabIndex = 1;
             this.textBoxHeight.TextChanged += new System.EventHandler(this.textBoxHeight_TextChanged);
+            this.textBoxHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHeight_KeyPress);
             // 
             // textBoxWidth
             // 
@@ -202,6 +203,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxWidth.Size = new System.Drawing.Size(201, 27);
             this.textBoxWidth.TabIndex = 1;
             this.textBoxWidth.TextChanged += new System.EventHandler(this.textBoxWidth_TextChanged);
+            this.textBoxWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxWidth_KeyPress);
             // 
             // textBoxLength
             // 
@@ -211,6 +213,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxLength.Size = new System.Drawing.Size(201, 27);
             this.textBoxLength.TabIndex = 1;
             this.textBoxLength.TextChanged += new System.EventHandler(this.textBoxLength_TextChanged);
+            this.textBoxLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLength_KeyPress);
             // 
             // textBoxGram
             // 
@@ -219,6 +222,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxGram.Name = "textBoxGram";
             this.textBoxGram.Size = new System.Drawing.Size(199, 27);
             this.textBoxGram.TabIndex = 1;
+            this.textBoxGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGram_KeyPress);
             // 
             // textBoxKillo
             // 
@@ -227,6 +231,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxKillo.Name = "textBoxKillo";
             this.textBoxKillo.Size = new System.Drawing.Size(173, 27);
             this.textBoxKillo.TabIndex = 1;
+            this.textBoxKillo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKillo_KeyPress);
             // 
             // labelForVolum
             // 
@@ -627,6 +632,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxAmountReceived.Name = "textBoxAmountReceived";
             this.textBoxAmountReceived.Size = new System.Drawing.Size(259, 27);
             this.textBoxAmountReceived.TabIndex = 1;
+            this.textBoxAmountReceived.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmountReceived_KeyPress);
             // 
             // label30
             // 
