@@ -50,6 +50,7 @@ namespace Yess_Express___Desktop_App
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.timePickerReceivedTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerReceivedDateTime = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -89,6 +90,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxReceiverName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.timePickerReceiverConsignee = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerReceiverConsignee = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -329,6 +331,7 @@ namespace Yess_Express___Desktop_App
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.timePickerReceivedTime);
             this.panel12.Controls.Add(this.dateTimePickerReceivedDateTime);
             this.panel12.Controls.Add(this.label15);
             this.panel12.Controls.Add(this.panel16);
@@ -336,6 +339,14 @@ namespace Yess_Express___Desktop_App
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(701, 79);
             this.panel12.TabIndex = 4;
+            // 
+            // timePickerReceivedTime
+            // 
+            this.timePickerReceivedTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timePickerReceivedTime.Location = new System.Drawing.Point(474, 7);
+            this.timePickerReceivedTime.Name = "timePickerReceivedTime";
+            this.timePickerReceivedTime.Size = new System.Drawing.Size(163, 23);
+            this.timePickerReceivedTime.TabIndex = 2;
             // 
             // dateTimePickerReceivedDateTime
             // 
@@ -477,6 +488,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxSenderPhone.Name = "textBoxSenderPhone";
             this.textBoxSenderPhone.Size = new System.Drawing.Size(330, 27);
             this.textBoxSenderPhone.TabIndex = 2;
+            this.textBoxSenderPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSenderPhone_KeyPress);
             // 
             // label5
             // 
@@ -619,7 +631,8 @@ namespace Yess_Express___Desktop_App
             this.comboBoxPaymentMethod.FormattingEnabled = true;
             this.comboBoxPaymentMethod.Items.AddRange(new object[] {
             "Cash",
-            "Check"});
+            "Check",
+            "Credit"});
             this.comboBoxPaymentMethod.Location = new System.Drawing.Point(5, 143);
             this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
             this.comboBoxPaymentMethod.Size = new System.Drawing.Size(324, 28);
@@ -717,6 +730,7 @@ namespace Yess_Express___Desktop_App
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.timePickerReceiverConsignee);
             this.panel11.Controls.Add(this.dateTimePickerReceiverConsignee);
             this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.panel19);
@@ -724,6 +738,14 @@ namespace Yess_Express___Desktop_App
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(752, 104);
             this.panel11.TabIndex = 3;
+            // 
+            // timePickerReceiverConsignee
+            // 
+            this.timePickerReceiverConsignee.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timePickerReceiverConsignee.Location = new System.Drawing.Point(532, 7);
+            this.timePickerReceiverConsignee.Name = "timePickerReceiverConsignee";
+            this.timePickerReceiverConsignee.Size = new System.Drawing.Size(160, 23);
+            this.timePickerReceiverConsignee.TabIndex = 3;
             // 
             // dateTimePickerReceiverConsignee
             // 
@@ -808,6 +830,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxReceiverPhone.Name = "textBoxReceiverPhone";
             this.textBoxReceiverPhone.Size = new System.Drawing.Size(343, 27);
             this.textBoxReceiverPhone.TabIndex = 2;
+            this.textBoxReceiverPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxReceiverPhone_KeyPress);
             // 
             // label7
             // 
@@ -1014,5 +1037,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.TextBox textBoxGoodsDescription;
         private System.Windows.Forms.ComboBox comboBoxPaymentMethod;
         private System.Windows.Forms.Button buttonSaveBill;
+        private System.Windows.Forms.DateTimePicker timePickerReceivedTime;
+        private System.Windows.Forms.DateTimePicker timePickerReceiverConsignee;
     }
 }

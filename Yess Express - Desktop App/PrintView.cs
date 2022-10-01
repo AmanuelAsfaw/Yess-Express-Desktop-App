@@ -43,6 +43,10 @@ namespace Yess_Express___Desktop_App
         public PrintView()
         {
             InitializeComponent();
+            this.labelSenderCompanyName.MaximumSize = new Size(498, 95);
+            this.labelConsigneeCompanyName.MaximumSize = new Size(487, 95);
+            this.labelDescriptionOfGoods.MaximumSize = new Size(250, 143);
+            this.labelSpecialInstructions.MaximumSize = new Size(237, 143);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

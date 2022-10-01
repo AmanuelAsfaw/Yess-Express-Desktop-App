@@ -35,3 +35,5 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.SearchView.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.MainWindow.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.SettingsForm.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.dll.config
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.ReportView.resources

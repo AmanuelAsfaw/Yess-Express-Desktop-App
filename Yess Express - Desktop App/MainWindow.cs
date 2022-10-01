@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -35,6 +36,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonSearch.Enabled = true;
             }
+            else if (currentFormName == "ReportView" && !buttonReport.Enabled)
+            {
+                buttonReport.Enabled = true;
+            }
             buttonSettings.Enabled = false;
             currentFormName = "SettingsForm";
             SettingsForm settingsForm = new SettingsForm();
@@ -66,6 +71,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonSettings.Enabled = true;
             }
+            else if (currentFormName == "ReportView" && !buttonReport.Enabled)
+            {
+                buttonReport.Enabled = true;
+            }
             buttonSearch.Enabled = false;
             currentFormName = "SearchView";
             SearchView searchView = new SearchView(this);
@@ -82,6 +91,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonSettings.Enabled = true;
             }
+            else if (currentFormName == "ReportView" && !buttonReport.Enabled)
+            {
+                buttonReport.Enabled = true;
+            }
             buttonNewBill.Enabled = false;
             currentFormName = "BillForm";
             BillForm billForm = new BillForm(this);
@@ -93,7 +106,7 @@ namespace Yess_Express___Desktop_App
             {
                 buttonNewBill.Enabled = true;
             }
-            if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            else if (currentFormName == "SearchView" && !buttonSearch.Enabled)
             {
                 buttonSearch.Enabled = true;
             }
@@ -109,6 +122,30 @@ namespace Yess_Express___Desktop_App
             currentFormName = "BillForm";
             buttonNewBill.Enabled = false;
             FormLoad(billForm);
+        }
+
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "SettingsForm" && !buttonSettings.Enabled)
+            {
+                buttonSettings.Enabled = true;
+            }
+            else if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "BillForm" && !buttonNewBill.Enabled)
+            {
+                buttonNewBill.Enabled = true;
+            }
+            buttonReport.Enabled = false;
+            currentFormName = "ReportView";
+            ReportView reportView = new ReportView();
+            FormLoad(reportView);
         }
     }
 }

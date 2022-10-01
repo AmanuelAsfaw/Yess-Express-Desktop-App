@@ -34,6 +34,7 @@ namespace Yess_Express___Desktop_App
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonNewBill = new System.Windows.Forms.Button();
+            this.buttonReport = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,9 @@ namespace Yess_Express___Desktop_App
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonReport);
             this.panel2.Controls.Add(this.buttonSettings);
             this.panel2.Controls.Add(this.buttonSearch);
             this.panel2.Controls.Add(this.buttonNewBill);
@@ -89,6 +92,17 @@ namespace Yess_Express___Desktop_App
             this.buttonNewBill.UseVisualStyleBackColor = true;
             this.buttonNewBill.Click += new System.EventHandler(this.buttonNewBill_Click);
             // 
+            // buttonReport
+            // 
+            this.buttonReport.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonReport.Location = new System.Drawing.Point(332, 13);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(75, 34);
+            this.buttonReport.TabIndex = 3;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -111,5 +125,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonNewBill;
+        private System.Windows.Forms.Button buttonReport;
     }
 }

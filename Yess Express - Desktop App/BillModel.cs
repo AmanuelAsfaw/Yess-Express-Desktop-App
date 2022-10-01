@@ -8,6 +8,7 @@ namespace Yess_Express___Desktop_App
     {
         public int Id { get; set; }
         public string TrackingNo { get; set; }
+        public int SenderId { get; set; }
         public string SenderName { get; set; }
         public string SenderPhone { get; set; }
         public string SenderCompanyNameAndAddress { get; set; }
@@ -30,7 +31,7 @@ namespace Yess_Express___Desktop_App
         public int AmountReceived { get; set; }
         public string PaymentMethod { get; set; }
         public string SpecialInstructions { get; set; }
-        public BillModel(int id, string tracking_no, string sender_name, string sender_phone, string sender_company_name_address, 
+        public BillModel(int id, string tracking_no, int sender_id, string sender_name, string sender_phone, string sender_company_name_address, 
             string shipper_signed_date, string yes_express_receiver, string yes_express_received_date, Double killo, Double gram,
             Double length, Double width, Double height, Double volum, string descrpt_goods, string consign_contact_person,
             string consign_phone, string consign_compny_name_address, string consign_received_date, string receiver_name,
@@ -38,6 +39,7 @@ namespace Yess_Express___Desktop_App
         {
             this.Id = id;
             this.TrackingNo = tracking_no;
+            this.SenderId = sender_id;
             this.SenderName = sender_name;
             this.SenderPhone = sender_phone;
             this.SenderCompanyNameAndAddress = sender_company_name_address;

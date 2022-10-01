@@ -62,7 +62,7 @@ namespace Yess_Express___Desktop_App
             this.label15 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.panelSenderCompanyName = new System.Windows.Forms.Panel();
             this.labelSenderCompanyName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -126,7 +126,7 @@ namespace Yess_Express___Desktop_App
             this.panel20.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel17.SuspendLayout();
+            this.panelSenderCompanyName.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -155,7 +155,7 @@ namespace Yess_Express___Desktop_App
             this.panelPrint.Controls.Add(this.panel20);
             this.panelPrint.Controls.Add(this.panel19);
             this.panelPrint.Controls.Add(this.panel18);
-            this.panelPrint.Controls.Add(this.panel17);
+            this.panelPrint.Controls.Add(this.panelSenderCompanyName);
             this.panelPrint.Controls.Add(this.panel16);
             this.panelPrint.Controls.Add(this.panel5);
             this.panelPrint.Controls.Add(this.panel15);
@@ -464,15 +464,15 @@ namespace Yess_Express___Desktop_App
             this.label18.TabIndex = 26;
             this.label18.Text = "Shipper\'s Signature";
             // 
-            // panel17
+            // panelSenderCompanyName
             // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.labelSenderCompanyName);
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Location = new System.Drawing.Point(27, 365);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(508, 111);
-            this.panel17.TabIndex = 19;
+            this.panelSenderCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSenderCompanyName.Controls.Add(this.labelSenderCompanyName);
+            this.panelSenderCompanyName.Controls.Add(this.label12);
+            this.panelSenderCompanyName.Location = new System.Drawing.Point(27, 365);
+            this.panelSenderCompanyName.Name = "panelSenderCompanyName";
+            this.panelSenderCompanyName.Size = new System.Drawing.Size(508, 111);
+            this.panelSenderCompanyName.TabIndex = 19;
             // 
             // labelSenderCompanyName
             // 
@@ -1027,8 +1027,8 @@ namespace Yess_Express___Desktop_App
             this.panel19.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
+            this.panelSenderCompanyName.ResumeLayout(false);
+            this.panelSenderCompanyName.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1101,7 +1101,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panelSenderCompanyName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

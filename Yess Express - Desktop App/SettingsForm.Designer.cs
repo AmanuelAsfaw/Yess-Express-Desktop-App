@@ -34,6 +34,8 @@ namespace Yess_Express___Desktop_App
             this.textBoxStartTrackingNo = new System.Windows.Forms.TextBox();
             this.textBoxEndTrackingNo = new System.Windows.Forms.TextBox();
             this.buttonSaveData = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxPrivousTrakcingNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelStartForTrackingNo
@@ -87,11 +89,31 @@ namespace Yess_Express___Desktop_App
             this.buttonSaveData.UseVisualStyleBackColor = false;
             this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(124, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Privous Tracking No";
+            // 
+            // textBoxPrivousTrakcingNo
+            // 
+            this.textBoxPrivousTrakcingNo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPrivousTrakcingNo.Location = new System.Drawing.Point(314, 287);
+            this.textBoxPrivousTrakcingNo.Name = "textBoxPrivousTrakcingNo";
+            this.textBoxPrivousTrakcingNo.Size = new System.Drawing.Size(292, 27);
+            this.textBoxPrivousTrakcingNo.TabIndex = 6;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 747);
+            this.Controls.Add(this.textBoxPrivousTrakcingNo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveData);
             this.Controls.Add(this.textBoxEndTrackingNo);
             this.Controls.Add(this.textBoxStartTrackingNo);
@@ -111,5 +133,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.TextBox textBoxStartTrackingNo;
         private System.Windows.Forms.TextBox textBoxEndTrackingNo;
         private System.Windows.Forms.Button buttonSaveData;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxPrivousTrakcingNo;
     }
 }

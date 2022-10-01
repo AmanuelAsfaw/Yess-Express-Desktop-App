@@ -24,7 +24,7 @@ namespace Yess_Express___Desktop_App
 
         private void SearchView_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Bills";
+            string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id";
             LoadWithQuery(query);
 
         }
@@ -33,8 +33,8 @@ namespace Yess_Express___Desktop_App
         {
             string searchKey = textBoxSearch.Text;
             if (textBoxSearch.Text != null && textBoxSearch.Text.Length > 2) {
-                string query = "SELECT * FROM Bills WHERE sender_name like '"+ searchKey+ "' OR sender_phone like '"+searchKey+
-                    "' OR sender_company_name_address like '"+searchKey+ "' OR consignee_phone like '" + searchKey+ 
+                string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey+ "%' OR Phone like '%"+searchKey+
+                    "%' OR CompanyNamdeAddress like '%" + searchKey+ "%' OR consignee_phone like '" + searchKey+ 
                     "' OR consignee_contact_person like '"+searchKey+ "' OR consignee_company_name_address like '"+searchKey+"';";
                 LoadWithQuery(query);
             }
@@ -42,60 +42,70 @@ namespace Yess_Express___Desktop_App
         public void LoadWithQuery(string query)
         {
             var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + parentdir + "\\local_database.db;"))
+            try
             {
-                conn.Open();
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=NewDatabase.db;"))
                 {
-                    using (SQLiteDataReader read = cmd.ExecuteReader())
+                    conn.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        dataGridViewSearchResult.Rows.Clear();
-                        billList.Clear();
-
-                        while (read.Read())
+                        using (SQLiteDataReader read = cmd.ExecuteReader())
                         {
-                            Button use_button = new Button();
-                            use_button.Text = "Use";
+                            dataGridViewSearchResult.Rows.Clear();
+                            billList.Clear();
 
-                            Button print_button = new Button();
-                            print_button.Text = "Print";
-                            billList.Add(new BillModel(int.Parse(read.GetValue(0).ToString()),read.GetValue(1).ToString(), read.GetValue(2).ToString(), read.GetValue(3).ToString(), read.GetValue(4).ToString(),
-                                read.GetValue(5).ToString(), read.GetValue(6).ToString(), read.GetValue(7).ToString(),Double.Parse(read.GetValue(8).ToString()), Double.Parse(read.GetValue(9).ToString()), Double.Parse(read.GetValue(10).ToString()), Double.Parse(read.GetValue(11).ToString()),
-                                Double.Parse(read.GetValue(12).ToString()), Double.Parse(read.GetValue(13).ToString()), read.GetValue(14).ToString(), read.GetValue(15).ToString(), read.GetValue(16).ToString(), read.GetValue(17).ToString(), read.GetValue(18).ToString(),
-                                read.GetValue(19).ToString(), read.GetValue(20).ToString(), int.Parse(read.GetValue(21).ToString()), read.GetValue(22).ToString(), read.GetValue(23).ToString()));
-                            
-                            int rowIndex = dataGridViewSearchResult.Rows.Add(new object[]
+                            while (read.Read())
                             {
-                                print_button,
-                                use_button,
-                                read.GetValue(1),
-                                read.GetValue(2),
-                                read.GetValue(3),
-                                read.GetValue(4),
-                                read.GetValue(6),
-                                read.GetValue(8),
-                                read.GetValue(9),
-                                read.GetValue(10),
-                                read.GetValue(11),
-                                read.GetValue(12),
-                                read.GetValue(13),
-                                read.GetValue(14),
-                                read.GetValue(15),
-                                read.GetValue(16),
-                                read.GetValue(17),
-                                read.GetValue(19),
-                                read.GetValue(20),
-                                read.GetValue(21),
-                                read.GetValue(22),
-                                read.GetValue(23),
-                            });
-                            dataGridViewSearchResult.Rows[rowIndex].Cells[0].Value = "Use";
-                            dataGridViewSearchResult.Rows[rowIndex].Cells[1].Value = "Print";
-                        }
-                    }
+                                Button use_button = new Button();
+                                use_button.Text = "Use";
 
+                                Button print_button = new Button();
+                                print_button.Text = "Print";
+                                billList.Add(new BillModel(
+                                    int.Parse(read.GetValue(0).ToString()), read.GetValue(1).ToString(), int.Parse(read.GetValue(2).ToString()), read.GetValue(23).ToString(), read.GetValue(24).ToString(), read.GetValue(25).ToString(), 
+                                    read.GetValue(3).ToString(), read.GetValue(4).ToString(), read.GetValue(5).ToString(), Double.Parse(read.GetValue(6).ToString()), Double.Parse(read.GetValue(7).ToString()),
+                                    Double.Parse(read.GetValue(8).ToString()), Double.Parse(read.GetValue(9).ToString()), Double.Parse(read.GetValue(10).ToString()), Double.Parse(read.GetValue(11).ToString()),read.GetValue(12).ToString(), read.GetValue(13).ToString(),
+                                    read.GetValue(14).ToString(), read.GetValue(15).ToString(), read.GetValue(16).ToString(), read.GetValue(17).ToString(),
+                                    read.GetValue(18).ToString(), int.Parse(read.GetValue(19).ToString()), read.GetValue(20).ToString(), read.GetValue(21).ToString()));
+
+                                int rowIndex = dataGridViewSearchResult.Rows.Add(new object[]
+                                {
+                                    print_button,
+                                    use_button,
+                                    read.GetValue(1), // Tracking No
+                                    read.GetValue(23), // Sender-Name
+                                    read.GetValue(24), // Sender-Phone
+                                    read.GetValue(25), // Sender-Company
+                                    read.GetValue(5), // YesExpress -Receiver
+                                    read.GetValue(6), // Killo
+                                    read.GetValue(7), // Gram
+                                    read.GetValue(8), // Length
+                                    read.GetValue(9), // Width
+                                    read.GetValue(10), // Height
+                                    read.GetValue(11), // Volum
+                                    read.GetValue(12), // Goods Desc
+                                    read.GetValue(13), // Contact Person
+                                    read.GetValue(14), // Consignee Phone
+                                    read.GetValue(15), // Consignee Compny
+                                    read.GetValue(17), // Receiver
+                                    read.GetValue(18), // Service Type
+                                    read.GetValue(19), // Amount Received
+                                    read.GetValue(20), // Payment Method
+                                    read.GetValue(21), // Special Instructions
+                                });
+                                dataGridViewSearchResult.Rows[rowIndex].Cells[0].Value = "Use";
+                                dataGridViewSearchResult.Rows[rowIndex].Cells[1].Value = "Print";
+                            }
+                        }
+
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
         }
         private void clickhandler(object sender, EventArgs e, string str)
         {
@@ -111,13 +121,13 @@ namespace Yess_Express___Desktop_App
             if(dataGridViewSearchResult.CurrentCell.ColumnIndex.ToString() == "0") {
                 try {
                     int row_index = dataGridViewSearchResult.CurrentCell.RowIndex;
-                    BillModel billModel = new BillModel(billList[row_index].Id, billList[row_index].TrackingNo, billList[row_index].SenderName,
+                    BillModel billModel = new BillModel(billList[row_index].Id, billList[row_index].TrackingNo, billList[row_index].SenderId,billList[row_index].SenderName,
                         billList[row_index].SenderPhone, billList[row_index].SenderCompanyNameAndAddress, billList[row_index].ShipperSignedDate,
                         billList[row_index].YesExpressReceiver, billList[row_index].YesExpressReceivedDateTime, billList[row_index].ItemKillo,
                         billList[row_index].ItemGram, billList[row_index].ItemLength, billList[row_index].ItemWidth, billList[row_index].ItemHeight,
                         billList[row_index].ItemVolum, billList[row_index].DescriptionOfGoods, billList[row_index].ConsigneeContactPerson,
-                        billList[row_index].ConsigneePhone, billList[row_index].ConsigneeCompanyNameAndAddress, billList[row_index].ReceiverName, 
-                        billList[row_index].ConsigneeReceivedDateTime, billList[row_index].ServiceType, billList[row_index].AmountReceived,
+                        billList[row_index].ConsigneePhone, billList[row_index].ConsigneeCompanyNameAndAddress, billList[row_index].ConsigneeReceivedDateTime,
+                        billList[row_index].ReceiverName, billList[row_index].ServiceType, billList[row_index].AmountReceived,
                         billList[row_index].PaymentMethod, billList[row_index].SpecialInstructions);
                     BillForm billForm = new BillForm(this.rootWindow, billModel);
                     this.rootWindow.change_to_new_bill_form(billForm);

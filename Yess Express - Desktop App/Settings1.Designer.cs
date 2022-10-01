@@ -25,7 +25,7 @@ namespace Yess_Express___Desktop_App {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int prvs_trackingno {
             get {
                 return ((int)(this["prvs_trackingno"]));
@@ -56,6 +56,18 @@ namespace Yess_Express___Desktop_App {
             }
             set {
                 this["end_trck_no"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DatabaseCreated {
+            get {
+                return ((bool)(this["DatabaseCreated"]));
+            }
+            set {
+                this["DatabaseCreated"] = value;
             }
         }
     }

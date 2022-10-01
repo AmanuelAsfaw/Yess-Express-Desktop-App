@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Amanu/source/repos/Yess Express - Desktop App/Yess Express - Desktop App/bin/Debug/netcoreapp3.1/NewDatabase.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1062"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainBills"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Bills" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="40"/><column index="2" value="85"/><column index="3" value="72"/><column index="4" value="185"/><column index="5" value="152"/><column index="6" value="264"/><column index="7" value="68"/><column index="8" value="77"/><column index="9" value="85"/><column index="10" value="80"/><column index="11" value="85"/><column index="12" value="82"/><column index="13" value="148"/><column index="14" value="184"/><column index="15" value="121"/><column index="16" value="242"/><column index="17" value="264"/><column index="18" value="105"/><column index="19" value="113"/><column index="20" value="121"/><column index="21" value="122"/><column index="22" value="137"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id
+
+CREATE TABLE 'Senders' ('Id' INTEGER NOT NULL, 'Name' TEXT, 'Phone' TEXT UNIQUE, 'CompanyNamdeAddress' TEXT, PRIMARY KEY('Id' AUTOINCREMENT))
+
+update Senders 
+
+SELECT * FROM Bills as B  INNER JOIN Senders as S ON S.Id = B.sender_id WHERE S.Name == &quot;new&quot;
+
+
+ALTER TABLE Bills ADD COLUMN (created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+ALTER TABLE Bills ADD COLUMN created_at timestamp DEFAULT NULL
+
+UPDATE Bills SET created_at = CURRENT_TIMESTAMP;
+
+
+PRAGMA writable_schema = on;
+
+UPDATE sqlite_master
+SET sql = replace(sql, 'DEFAULT NULL',
+                       'DEFAULT CURRENT_TIMESTAMP')
+WHERE type = 'table'
+  AND name = 'Bills';
+ 
+PRAGMA writable_schema = off;
+
+
+CREATE TABLE 'Bills' ( 'id' INTEGER NOT NULL UNIQUE, 'tracking_no' INTEGER NOT NULL UNIQUE, 'sender_id' INTEGER, 'shipper_signed_date'   TEXT, 'yes_express_receiver'  TEXT, 'yes_express_received_datetime' TEXT, 'item_killo'    REAL, 'item_gram' REAL, 'item_length'   REAL, 'item_width'    REAL, 'item_height'   REAL, 'item_volum'    REAL, 'description_of_goods'  TEXT, 'consignee_contact_person'  TEXT, 'consignee_phone'   TEXT, 'consignee_company_name_address'    TEXT, 'consignee_received_datatime'   TEXT, 'receiver_name' TEXT, 'service_type'  TEXT, 'amount_received'   INTEGER, 'payment_method'    TEXT, 'special_instructions'  TEXT, created_at timestamp DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY(sender_id) REFERENCES Senders(sender_id), PRIMARY KEY('id' AUTOINCREMENT))
+
+ALTER TABLE 'Bills' ADD updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+
+ALTER TABLE Bills ADD COLUMN updated_at timestamp DEFAULT NULL
+
+
+UPDATE Bills SET updated_at = CURRENT_TIMESTAMP;
+
+
+PRAGMA writable_schema = on;
+
+UPDATE sqlite_master
+SET sql = replace(sql, 'DEFAULT NULL',
+                       'DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
+WHERE type = 'table'
+  AND name = 'Bills';
+ 
+PRAGMA writable_schema = off;
+
+CREATE TABLE 'Bills' ( 'id' INTEGER NOT NULL UNIQUE, 'tracking_no' INTEGER NOT NULL UNIQUE, 'sender_id' INTEGER, 'shipper_signed_date'   TEXT, 'yes_express_receiver'  TEXT, 'yes_express_received_datetime' TEXT, 'item_killo'    REAL, 'item_gram' REAL, 'item_length'   REAL, 'item_width'    REAL, 'item_height'   REAL, 'item_volum'    REAL, 'description_of_goods'  TEXT, 'consignee_contact_person'  TEXT, 'consignee_phone'   TEXT, 'consignee_company_name_address'    TEXT, 'consignee_received_datatime'   TEXT, 'receiver_name' TEXT, 'service_type'  TEXT, 'amount_received'   INTEGER, 'payment_method'    TEXT, 'special_instructions'  TEXT, created_at timestamp DEFAULT CURR, updated_at timestamp DEFAULT NULLENT_TIMESTAMP, FOREIGN KEY(sender_id) REFERENCES Senders(sender_id), PRIMARY KEY('id' AUTOINCREMENT))</sql><current_tab id="0"/></tab_sql></sqlb_project>
