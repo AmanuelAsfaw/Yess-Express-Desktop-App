@@ -11,32 +11,42 @@ namespace Yess_Express___Desktop_App
 {
     public partial class ReportView : Form
     {
+        string ThisMonth = DateTime.Now.Month.ToString("00");
         string daily_cash_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', '0 day') AND payment_method = 'Cash';";
-        string daily_cash_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Cash';";
+        string daily_cash_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(S.created_at) >= DATE('now', '0 day') AND B.payment_method = 'Cash';";
 
         string daily_credit_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', '0 day') AND payment_method = 'Credit';";
-        string daily_credit_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Credit';";
+        string daily_credit_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(S.created_at) >= DATE('now', '0 day') AND B.payment_method = 'Credit';";
 
         string daily_check_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', '0 day') AND payment_method = 'Check';";
-        string daily_check_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Check';";
+        string daily_check_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(S.created_at) >= DATE('now', '0 day') AND B.payment_method = 'Check';";
+
+        string daily_fc_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', '0 day') AND payment_method = 'FC';";
+        string daily_fc_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(S.created_at) >= DATE('now', '0 day') AND B.payment_method = 'FC';";
 
         string weekly_cash_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', 'weekday 0', '-7 days') AND payment_method = 'Cash';";
-        string weekly_cash_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Cash';";
+        string weekly_cash_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Cash';";
 
         string weekly_credit_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', 'weekday 0', '-7 days') AND payment_method = 'Credit';";
-        string weekly_credit_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Credit';";
+        string weekly_credit_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Credit';";
 
         string weekly_check_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', 'weekday 0', '-7 days') AND payment_method = 'Check';";
-        string weekly_check_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Check';";
+        string weekly_check_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'Check';";
 
-        string monthly_cash_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '10' AND payment_method = 'Cash' AND payment_method = 'Cash';";
-        string monthly_cash_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Cash';";
+        string weekly_fc_bills_query = "SELECT count(*) FROM Bills WHERE DATE(created_at) >= DATE('now', 'weekday 0', '-7 days') AND payment_method = 'FC';";
+        string weekly_fc_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE DATE(B.created_at) >= DATE('now', 'weekday 0', '-7 days') AND B.payment_method = 'FC';";
 
-        string monthly_credit_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '10' AND payment_method = 'Credit';";
-        string monthly_credit_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Credit';";
+        string monthly_cash_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '"+ DateTime.Now.Month.ToString("00") + "' AND payment_method = 'Cash' AND payment_method = 'Cash';";
+        string monthly_cash_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND B.payment_method = 'Cash';";
 
-        string monthly_check_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '10' AND payment_method = 'Check';";
-        string monthly_check_senders_query = "SELECT count(*) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '10' AND B.payment_method = 'Check';";
+        string monthly_credit_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND payment_method = 'Credit';";
+        string monthly_credit_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND B.payment_method = 'Credit';";
+
+        string monthly_check_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND payment_method = 'Check';";
+        string monthly_check_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND B.payment_method = 'Check';";
+
+        string monthly_fc_bills_query = "SELECT count(*) FROM Bills WHERE strftime('%m', created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND payment_method = 'FC';";
+        string monthly_fc_senders_query = "SELECT count(DISTINCT Name) FROM Senders as S INNER JOIN Bills as B ON S.Id = B.sender_id WHERE strftime('%m', B.created_at) = '" + DateTime.Now.Month.ToString("00") + "' AND B.payment_method = 'FC';";
 
         public ReportView()
         {
@@ -89,6 +99,16 @@ namespace Yess_Express___Desktop_App
                         Int64 check_sender = (Int64)cmd.ExecuteScalar();
                         labelDailyCheckSender.Text = check_sender.ToString();
 
+                        cmd.CommandText = daily_fc_bills_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_bill = (Int64)cmd.ExecuteScalar();
+                        labelDailyFCBill.Text = fc_bill.ToString();
+
+                        cmd.CommandText = daily_fc_senders_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_sender = (Int64)cmd.ExecuteScalar();
+                        labelDailyFCSender.Text = fc_sender.ToString();
+
                     }
                 }
             }
@@ -137,6 +157,16 @@ namespace Yess_Express___Desktop_App
                         Int64 check_sender = (Int64)cmd.ExecuteScalar();
                         labelWeeklyCheckSender.Text = check_sender.ToString();
 
+                        cmd.CommandText = weekly_fc_bills_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_bill = (Int64)cmd.ExecuteScalar();
+                        labelWeeklyFCBill.Text = fc_bill.ToString();
+
+                        cmd.CommandText = weekly_fc_senders_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_sender = (Int64)cmd.ExecuteScalar();
+                        labelWeeklyFCSender.Text = fc_sender.ToString();
+
                     }
                 }
             }
@@ -184,6 +214,16 @@ namespace Yess_Express___Desktop_App
                         cmd.CommandType = CommandType.Text;
                         Int64 check_sender = (Int64)cmd.ExecuteScalar();
                         labelMonthlyCheckSender.Text = check_sender.ToString();
+
+                        cmd.CommandText = monthly_fc_bills_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_bill = (Int64)cmd.ExecuteScalar();
+                        labelMonthlyFCBill.Text = fc_bill.ToString();
+
+                        cmd.CommandText = monthly_fc_senders_query;
+                        cmd.CommandType = CommandType.Text;
+                        Int64 fc_sender = (Int64)cmd.ExecuteScalar();
+                        labelMonthlyFCSender.Text = fc_sender.ToString();
 
                     }
                 }

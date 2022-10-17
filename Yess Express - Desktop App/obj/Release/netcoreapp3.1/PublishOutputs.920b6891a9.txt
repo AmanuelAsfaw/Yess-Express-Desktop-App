@@ -1,0 +1,20 @@
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.exe
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.deps.json
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.runtimeconfig.json
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.dll.config
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\Yess Express - Desktop App.pdb
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\EntityFramework.SqlServer.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\EntityFramework.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\System.Data.SQLite.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\System.Data.SqlClient.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\System.Data.SQLite.EF6.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win-arm64\native\sni.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win-x64\native\sni.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win-x86\native\sni.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\New folder\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

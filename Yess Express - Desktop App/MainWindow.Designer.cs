@@ -29,12 +29,13 @@ namespace Yess_Express___Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonReport = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonNewBill = new System.Windows.Forms.Button();
-            this.buttonReport = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@ namespace Yess_Express___Desktop_App
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1548, 918);
             this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // panel2
             // 
@@ -58,6 +60,17 @@ namespace Yess_Express___Desktop_App
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1548, 55);
             this.panel2.TabIndex = 1;
+            // 
+            // buttonReport
+            // 
+            this.buttonReport.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonReport.Location = new System.Drawing.Point(332, 13);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(75, 34);
+            this.buttonReport.TabIndex = 3;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // buttonSettings
             // 
@@ -92,26 +105,17 @@ namespace Yess_Express___Desktop_App
             this.buttonNewBill.UseVisualStyleBackColor = true;
             this.buttonNewBill.Click += new System.EventHandler(this.buttonNewBill_Click);
             // 
-            // buttonReport
-            // 
-            this.buttonReport.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonReport.Location = new System.Drawing.Point(332, 13);
-            this.buttonReport.Name = "buttonReport";
-            this.buttonReport.Size = new System.Drawing.Size(75, 34);
-            this.buttonReport.TabIndex = 3;
-            this.buttonReport.Text = "Report";
-            this.buttonReport.UseVisualStyleBackColor = true;
-            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1572, 996);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "Yes Express";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

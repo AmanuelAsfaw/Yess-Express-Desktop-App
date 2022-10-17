@@ -632,7 +632,8 @@ namespace Yess_Express___Desktop_App
             this.comboBoxPaymentMethod.Items.AddRange(new object[] {
             "Cash",
             "Check",
-            "Credit"});
+            "Credit",
+            "FC"});
             this.comboBoxPaymentMethod.Location = new System.Drawing.Point(5, 143);
             this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
             this.comboBoxPaymentMethod.Size = new System.Drawing.Size(324, 28);
@@ -683,7 +684,11 @@ namespace Yess_Express___Desktop_App
             this.comboBoxServiceType.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxServiceType.FormattingEnabled = true;
             this.comboBoxServiceType.Items.AddRange(new object[] {
-            "General Domestics"});
+            "General Domestics",
+            "General Air",
+            "Same Day Delivery",
+            "Door to Door",
+            "Other"});
             this.comboBoxServiceType.Location = new System.Drawing.Point(404, 39);
             this.comboBoxServiceType.Name = "comboBoxServiceType";
             this.comboBoxServiceType.Size = new System.Drawing.Size(328, 28);
@@ -906,6 +911,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1493, 882);
             this.Controls.Add(this.buttonSaveBill);
             this.Controls.Add(this.panel2);

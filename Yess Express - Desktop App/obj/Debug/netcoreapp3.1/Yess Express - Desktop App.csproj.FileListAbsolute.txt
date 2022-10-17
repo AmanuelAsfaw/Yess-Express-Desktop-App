@@ -4,7 +4,6 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.runtimeconfig.dev.json
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.dll
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.pdb
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.csproj.AssemblyReference.cache
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.BillForm.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.Form1.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess Express - Desktop App.csproj.GenerateResource.cache
@@ -37,3 +36,4 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.SettingsForm.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Debug\netcoreapp3.1\Yess Express - Desktop App.dll.config
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.ReportView.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Debug\netcoreapp3.1\Yess_Express___Desktop_App.ResetAppSettings.resources

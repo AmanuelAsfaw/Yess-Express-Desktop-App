@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -14,8 +15,20 @@ namespace Yess_Express___Desktop_App
         public string senderName, senderPhone, senderCompanyNameAndAddress, senderSendDate, yesExpressReceivedPerson, yesExpressReceivedDateTime, descriptionOfGoods, killo, gram, shipmentLength, shipmentWidth, shipmentHeight, shipmentVolume,
                 consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no;
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            /*
+            Graphics graphics = this.CreateGraphics();
+            memoryimg = new Bitmap(this.Size.Width, this.Size.Height, graphics);
+            Graphics graphics_img = Graphics.FromImage(memoryimg);
+            graphics_img.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog1.ShowDialog();*/
             Print(this.panelPrint);
         }
         private Bitmap memoryimg;
@@ -25,14 +38,23 @@ namespace Yess_Express___Desktop_App
             panelPrint = pnl;
             getPrintArea(pnl);
             printDocument1.DefaultPageSettings.Landscape = true;
+            var paperSize = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>().FirstOrDefault(e => e.PaperName == "A5");
+            IEnumerable<PaperSize> paperSizes = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>();
+            PaperSize sizeA5 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A5);
+            printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = sizeA5;
             printPreviewDialog1.Document = printDocument1;
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewDialog1.ShowDialog();
+
         }
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             Rectangle pagearea = e.PageBounds;
             e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.panelPrint.Width / 2), this.panelPrint.Location.Y);
+            e.Graphics.DrawImage(memoryimg, 0, 0);
+            /*Bitmap b = new Bitmap(panelPrint.Width-20, panelPrint.Height-20);
+            panelPrint.DrawToBitmap(b, new System.Drawing.Rectangle(0, 0, panelPrint.Width, panelPrint.Height));
+            e.Graphics.DrawImage(b, -20, -40);*/
         }
         private void getPrintArea(Panel pnl)
         {

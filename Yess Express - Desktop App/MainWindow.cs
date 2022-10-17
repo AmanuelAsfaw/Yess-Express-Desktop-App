@@ -24,6 +24,11 @@ namespace Yess_Express___Desktop_App
             buttonNewBill.Enabled = false;
             BillForm billForm = new BillForm(this);
             FormLoad(billForm);
+            panelMain.AutoScroll = false;
+            panelMain.HorizontalScroll.Enabled = false;
+            panelMain.HorizontalScroll.Visible = false;
+            panelMain.HorizontalScroll.Maximum = 0;
+            panelMain.AutoScroll = true;
         }
 
         private void buttonSettings_Click(object sender, EventArgs e)
@@ -146,6 +151,11 @@ namespace Yess_Express___Desktop_App
             currentFormName = "ReportView";
             ReportView reportView = new ReportView();
             FormLoad(reportView);
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

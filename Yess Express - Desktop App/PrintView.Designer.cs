@@ -33,6 +33,10 @@ namespace Yess_Express___Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintView));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelPrint = new System.Windows.Forms.Panel();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.labelDescriptionOfGoods = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -149,6 +153,10 @@ namespace Yess_Express___Desktop_App
             // panelPrint
             // 
             this.panelPrint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPrint.Controls.Add(this.checkBox4);
+            this.panelPrint.Controls.Add(this.checkBox3);
+            this.panelPrint.Controls.Add(this.checkBox2);
+            this.panelPrint.Controls.Add(this.checkBox1);
             this.panelPrint.Controls.Add(this.panel23);
             this.panelPrint.Controls.Add(this.panel22);
             this.panelPrint.Controls.Add(this.panel21);
@@ -173,8 +181,53 @@ namespace Yess_Express___Desktop_App
             this.panelPrint.Controls.Add(this.panel1);
             this.panelPrint.Location = new System.Drawing.Point(12, 47);
             this.panelPrint.Name = "panelPrint";
-            this.panelPrint.Size = new System.Drawing.Size(1094, 769);
+            this.panelPrint.Size = new System.Drawing.Size(1100, 800);
             this.panelPrint.TabIndex = 0;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox4.Location = new System.Drawing.Point(771, 768);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(142, 24);
+            this.checkBox4.TabIndex = 29;
+            this.checkBox4.Text = "For Branch Office";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox3.Location = new System.Drawing.Point(504, 768);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(122, 24);
+            this.checkBox3.TabIndex = 28;
+            this.checkBox3.Text = "For Consignee";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox2.Location = new System.Drawing.Point(259, 768);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(103, 24);
+            this.checkBox2.TabIndex = 27;
+            this.checkBox2.Text = "For Finance";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.Location = new System.Drawing.Point(37, 768);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(91, 24);
+            this.checkBox1.TabIndex = 26;
+            this.checkBox1.Text = "For Payee";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // panel23
             // 
@@ -909,7 +962,7 @@ namespace Yess_Express___Desktop_App
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(27, 27);
+            this.panel1.Location = new System.Drawing.Point(27, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1004, 198);
             this.panel1.TabIndex = 0;
@@ -1007,7 +1060,9 @@ namespace Yess_Express___Desktop_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1493, 860);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1493, 891);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelPrint);
             this.Name = "PrintView";
@@ -1015,6 +1070,7 @@ namespace Yess_Express___Desktop_App
             this.Load += new System.EventHandler(this.PrintView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panelPrint.ResumeLayout(false);
+            this.panelPrint.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -1154,5 +1210,9 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label labelKillo;
         private System.Windows.Forms.Label labelYesExpressDateTime;
         private System.Windows.Forms.Label labelReceivedYesExpress;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

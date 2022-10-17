@@ -91,6 +91,24 @@ namespace Yess_Express___Desktop_App
             this.panel12 = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.pictureBoxRefreshBTN = new System.Windows.Forms.PictureBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelDailyFCSender = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelDailyFCBill = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.labelWeeklyFCSender = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.labelWeeklyFCBill = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.labelMonthlyFCSender = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.labelMonthlyFCBill = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,6 +122,9 @@ namespace Yess_Express___Desktop_App
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefreshBTN)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -198,7 +219,7 @@ namespace Yess_Express___Desktop_App
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.labelDailyCreditBills);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(293, 116);
+            this.panel3.Location = new System.Drawing.Point(262, 116);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(178, 100);
             this.panel3.TabIndex = 2;
@@ -259,7 +280,7 @@ namespace Yess_Express___Desktop_App
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.labelDailyCheckBill);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(543, 116);
+            this.panel4.Location = new System.Drawing.Point(482, 116);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(182, 100);
             this.panel4.TabIndex = 3;
@@ -320,7 +341,7 @@ namespace Yess_Express___Desktop_App
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.labelWeeklyCheckBill);
             this.panel5.Controls.Add(this.label21);
-            this.panel5.Location = new System.Drawing.Point(543, 332);
+            this.panel5.Location = new System.Drawing.Point(482, 332);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(182, 100);
             this.panel5.TabIndex = 7;
@@ -381,7 +402,7 @@ namespace Yess_Express___Desktop_App
             this.panel6.Controls.Add(this.label24);
             this.panel6.Controls.Add(this.labelWeeklyCreditBill);
             this.panel6.Controls.Add(this.label26);
-            this.panel6.Location = new System.Drawing.Point(293, 332);
+            this.panel6.Location = new System.Drawing.Point(262, 332);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(178, 100);
             this.panel6.TabIndex = 6;
@@ -524,7 +545,7 @@ namespace Yess_Express___Desktop_App
             this.panel9.Controls.Add(this.label35);
             this.panel9.Controls.Add(this.labelMonthlyCheckBill);
             this.panel9.Controls.Add(this.label37);
-            this.panel9.Location = new System.Drawing.Point(543, 559);
+            this.panel9.Location = new System.Drawing.Point(482, 559);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(182, 100);
             this.panel9.TabIndex = 11;
@@ -585,7 +606,7 @@ namespace Yess_Express___Desktop_App
             this.panel10.Controls.Add(this.label40);
             this.panel10.Controls.Add(this.labelMonthlyCreditBill);
             this.panel10.Controls.Add(this.label42);
-            this.panel10.Location = new System.Drawing.Point(293, 559);
+            this.panel10.Location = new System.Drawing.Point(262, 559);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(178, 100);
             this.panel10.TabIndex = 10;
@@ -730,11 +751,197 @@ namespace Yess_Express___Desktop_App
             this.pictureBoxRefreshBTN.TabStop = false;
             this.pictureBoxRefreshBTN.Click += new System.EventHandler(this.pictureBoxRefreshBTN_Click);
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Controls.Add(this.labelDailyFCSender);
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Controls.Add(this.labelDailyFCBill);
+            this.panel13.Controls.Add(this.label13);
+            this.panel13.Location = new System.Drawing.Point(697, 116);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(182, 100);
+            this.panel13.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(92, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Senders";
+            // 
+            // labelDailyFCSender
+            // 
+            this.labelDailyFCSender.AutoSize = true;
+            this.labelDailyFCSender.Location = new System.Drawing.Point(66, 62);
+            this.labelDailyFCSender.Name = "labelDailyFCSender";
+            this.labelDailyFCSender.Size = new System.Drawing.Size(19, 15);
+            this.labelDailyFCSender.TabIndex = 3;
+            this.labelDailyFCSender.Text = "25";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(92, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 15);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Bills";
+            // 
+            // labelDailyFCBill
+            // 
+            this.labelDailyFCBill.AutoSize = true;
+            this.labelDailyFCBill.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDailyFCBill.Location = new System.Drawing.Point(49, 35);
+            this.labelDailyFCBill.Name = "labelDailyFCBill";
+            this.labelDailyFCBill.Size = new System.Drawing.Size(36, 20);
+            this.labelDailyFCBill.TabIndex = 1;
+            this.labelDailyFCBill.Text = "230";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(3, 2);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "FC";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.label15);
+            this.panel14.Controls.Add(this.labelWeeklyFCSender);
+            this.panel14.Controls.Add(this.label20);
+            this.panel14.Controls.Add(this.labelWeeklyFCBill);
+            this.panel14.Controls.Add(this.label25);
+            this.panel14.Location = new System.Drawing.Point(697, 335);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(182, 100);
+            this.panel14.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(92, 62);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 15);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Senders";
+            // 
+            // labelWeeklyFCSender
+            // 
+            this.labelWeeklyFCSender.AutoSize = true;
+            this.labelWeeklyFCSender.Location = new System.Drawing.Point(66, 62);
+            this.labelWeeklyFCSender.Name = "labelWeeklyFCSender";
+            this.labelWeeklyFCSender.Size = new System.Drawing.Size(19, 15);
+            this.labelWeeklyFCSender.TabIndex = 3;
+            this.labelWeeklyFCSender.Text = "25";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(92, 39);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(28, 15);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Bills";
+            // 
+            // labelWeeklyFCBill
+            // 
+            this.labelWeeklyFCBill.AutoSize = true;
+            this.labelWeeklyFCBill.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelWeeklyFCBill.Location = new System.Drawing.Point(49, 35);
+            this.labelWeeklyFCBill.Name = "labelWeeklyFCBill";
+            this.labelWeeklyFCBill.Size = new System.Drawing.Size(36, 20);
+            this.labelWeeklyFCBill.TabIndex = 1;
+            this.labelWeeklyFCBill.Text = "230";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(3, 2);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(26, 20);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "FC";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.label29);
+            this.panel15.Controls.Add(this.labelMonthlyFCSender);
+            this.panel15.Controls.Add(this.label34);
+            this.panel15.Controls.Add(this.labelMonthlyFCBill);
+            this.panel15.Controls.Add(this.label39);
+            this.panel15.Location = new System.Drawing.Point(697, 559);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(182, 100);
+            this.panel15.TabIndex = 15;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(92, 62);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(48, 15);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Senders";
+            // 
+            // labelMonthlyFCSender
+            // 
+            this.labelMonthlyFCSender.AutoSize = true;
+            this.labelMonthlyFCSender.Location = new System.Drawing.Point(66, 62);
+            this.labelMonthlyFCSender.Name = "labelMonthlyFCSender";
+            this.labelMonthlyFCSender.Size = new System.Drawing.Size(19, 15);
+            this.labelMonthlyFCSender.TabIndex = 3;
+            this.labelMonthlyFCSender.Text = "25";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(92, 39);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(28, 15);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Bills";
+            // 
+            // labelMonthlyFCBill
+            // 
+            this.labelMonthlyFCBill.AutoSize = true;
+            this.labelMonthlyFCBill.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMonthlyFCBill.Location = new System.Drawing.Point(49, 35);
+            this.labelMonthlyFCBill.Name = "labelMonthlyFCBill";
+            this.labelMonthlyFCBill.Size = new System.Drawing.Size(36, 20);
+            this.labelMonthlyFCBill.TabIndex = 1;
+            this.labelMonthlyFCBill.Text = "230";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label39.Location = new System.Drawing.Point(3, 2);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(26, 20);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "FC";
+            // 
             // ReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 746);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.pictureBoxRefreshBTN);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel10);
@@ -777,6 +984,12 @@ namespace Yess_Express___Desktop_App
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefreshBTN)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -844,5 +1057,23 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.PictureBox pictureBoxRefreshBTN;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelDailyFCSender;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelDailyFCBill;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelWeeklyFCSender;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label labelWeeklyFCBill;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label labelMonthlyFCSender;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label labelMonthlyFCBill;
+        private System.Windows.Forms.Label label39;
     }
 }
