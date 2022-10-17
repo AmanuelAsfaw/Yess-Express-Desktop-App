@@ -67,6 +67,9 @@ namespace Yess_Express___Desktop_App
             this.panel18 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.panelSenderCompanyName = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.labelShipperTIN = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.labelSenderCompanyName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -93,6 +96,9 @@ namespace Yess_Express___Desktop_App
             this.panel10 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.labelConsigneeTIN = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.labelConsigneeCompanyName = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -131,6 +137,7 @@ namespace Yess_Express___Desktop_App
             this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panelSenderCompanyName.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -140,6 +147,7 @@ namespace Yess_Express___Desktop_App
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel24.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -181,14 +189,15 @@ namespace Yess_Express___Desktop_App
             this.panelPrint.Controls.Add(this.panel1);
             this.panelPrint.Location = new System.Drawing.Point(12, 47);
             this.panelPrint.Name = "panelPrint";
-            this.panelPrint.Size = new System.Drawing.Size(1100, 800);
+            this.panelPrint.Padding = new System.Windows.Forms.Padding(300, 100, 0, 0);
+            this.panelPrint.Size = new System.Drawing.Size(1177, 836);
             this.panelPrint.TabIndex = 0;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(771, 768);
+            this.checkBox4.Location = new System.Drawing.Point(807, 769);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(142, 24);
             this.checkBox4.TabIndex = 29;
@@ -199,7 +208,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(504, 768);
+            this.checkBox3.Location = new System.Drawing.Point(522, 769);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(122, 24);
             this.checkBox3.TabIndex = 28;
@@ -210,7 +219,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(259, 768);
+            this.checkBox2.Location = new System.Drawing.Point(275, 769);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(103, 24);
             this.checkBox2.TabIndex = 27;
@@ -222,7 +231,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(37, 768);
+            this.checkBox1.Location = new System.Drawing.Point(34, 769);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(91, 24);
             this.checkBox1.TabIndex = 26;
@@ -520,6 +529,7 @@ namespace Yess_Express___Desktop_App
             // panelSenderCompanyName
             // 
             this.panelSenderCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSenderCompanyName.Controls.Add(this.panel17);
             this.panelSenderCompanyName.Controls.Add(this.labelSenderCompanyName);
             this.panelSenderCompanyName.Controls.Add(this.label12);
             this.panelSenderCompanyName.Location = new System.Drawing.Point(27, 365);
@@ -527,11 +537,40 @@ namespace Yess_Express___Desktop_App
             this.panelSenderCompanyName.Size = new System.Drawing.Size(508, 111);
             this.panelSenderCompanyName.TabIndex = 19;
             // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.labelShipperTIN);
+            this.panel17.Controls.Add(this.label36);
+            this.panel17.Location = new System.Drawing.Point(-1, -1);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(508, 26);
+            this.panel17.TabIndex = 2;
+            // 
+            // labelShipperTIN
+            // 
+            this.labelShipperTIN.AutoSize = true;
+            this.labelShipperTIN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelShipperTIN.Location = new System.Drawing.Point(95, 3);
+            this.labelShipperTIN.Name = "labelShipperTIN";
+            this.labelShipperTIN.Size = new System.Drawing.Size(12, 15);
+            this.labelShipperTIN.TabIndex = 1;
+            this.labelShipperTIN.Text = "?";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(6, 3);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(83, 15);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Customer TIN:";
+            // 
             // labelSenderCompanyName
             // 
             this.labelSenderCompanyName.AutoSize = true;
             this.labelSenderCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSenderCompanyName.Location = new System.Drawing.Point(6, 21);
+            this.labelSenderCompanyName.Location = new System.Drawing.Point(9, 54);
             this.labelSenderCompanyName.Name = "labelSenderCompanyName";
             this.labelSenderCompanyName.Size = new System.Drawing.Size(22, 15);
             this.labelSenderCompanyName.TabIndex = 1;
@@ -540,7 +579,7 @@ namespace Yess_Express___Desktop_App
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 3);
+            this.label12.Location = new System.Drawing.Point(3, 28);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(164, 15);
             this.label12.TabIndex = 0;
@@ -770,6 +809,7 @@ namespace Yess_Express___Desktop_App
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.panel24);
             this.panel8.Controls.Add(this.labelConsigneeCompanyName);
             this.panel8.Controls.Add(this.label11);
             this.panel8.Location = new System.Drawing.Point(534, 365);
@@ -777,11 +817,40 @@ namespace Yess_Express___Desktop_App
             this.panel8.Size = new System.Drawing.Size(497, 111);
             this.panel8.TabIndex = 10;
             // 
+            // panel24
+            // 
+            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Controls.Add(this.labelConsigneeTIN);
+            this.panel24.Controls.Add(this.label37);
+            this.panel24.Location = new System.Drawing.Point(-1, -1);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(497, 26);
+            this.panel24.TabIndex = 2;
+            // 
+            // labelConsigneeTIN
+            // 
+            this.labelConsigneeTIN.AutoSize = true;
+            this.labelConsigneeTIN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelConsigneeTIN.Location = new System.Drawing.Point(97, 3);
+            this.labelConsigneeTIN.Name = "labelConsigneeTIN";
+            this.labelConsigneeTIN.Size = new System.Drawing.Size(12, 15);
+            this.labelConsigneeTIN.TabIndex = 2;
+            this.labelConsigneeTIN.Text = "?";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(8, 3);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(83, 15);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Customer TIN:";
+            // 
             // labelConsigneeCompanyName
             // 
             this.labelConsigneeCompanyName.AutoSize = true;
             this.labelConsigneeCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelConsigneeCompanyName.Location = new System.Drawing.Point(6, 21);
+            this.labelConsigneeCompanyName.Location = new System.Drawing.Point(6, 54);
             this.labelConsigneeCompanyName.Name = "labelConsigneeCompanyName";
             this.labelConsigneeCompanyName.Size = new System.Drawing.Size(22, 15);
             this.labelConsigneeCompanyName.TabIndex = 1;
@@ -790,7 +859,7 @@ namespace Yess_Express___Desktop_App
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 3);
+            this.label11.Location = new System.Drawing.Point(6, 28);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 15);
             this.label11.TabIndex = 0;
@@ -962,7 +1031,7 @@ namespace Yess_Express___Desktop_App
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(27, 49);
+            this.panel1.Location = new System.Drawing.Point(27, 19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1004, 198);
             this.panel1.TabIndex = 0;
@@ -971,11 +1040,11 @@ namespace Yess_Express___Desktop_App
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(779, 160);
+            this.label6.Location = new System.Drawing.Point(757, 160);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 20);
+            this.label6.Size = new System.Drawing.Size(237, 20);
             this.label6.TabIndex = 6;
-            this.label6.Text = "+251 118 12 6145/46/47/48/49";
+            this.label6.Text = "+251 118 12 6145/46/47/48/49/50";
             // 
             // label5
             // 
@@ -1033,6 +1102,7 @@ namespace Yess_Express___Desktop_App
             this.pictureBox2.Location = new System.Drawing.Point(21, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(183, 147);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -1062,7 +1132,7 @@ namespace Yess_Express___Desktop_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1493, 891);
+            this.ClientSize = new System.Drawing.Size(1493, 951);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelPrint);
             this.Name = "PrintView";
@@ -1085,6 +1155,8 @@ namespace Yess_Express___Desktop_App
             this.panel18.PerformLayout();
             this.panelSenderCompanyName.ResumeLayout(false);
             this.panelSenderCompanyName.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1103,6 +1175,8 @@ namespace Yess_Express___Desktop_App
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1214,5 +1288,11 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label labelShipperTIN;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label labelConsigneeTIN;
+        private System.Windows.Forms.Label label37;
     }
 }

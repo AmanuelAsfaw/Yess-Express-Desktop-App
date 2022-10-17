@@ -13,7 +13,7 @@ namespace Yess_Express___Desktop_App
     public partial class PrintView : Form
     {
         public string senderName, senderPhone, senderCompanyNameAndAddress, senderSendDate, yesExpressReceivedPerson, yesExpressReceivedDateTime, descriptionOfGoods, killo, gram, shipmentLength, shipmentWidth, shipmentHeight, shipmentVolume,
-                consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no;
+                consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no, shipper_tin, consignee_tin;
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -41,7 +41,8 @@ namespace Yess_Express___Desktop_App
             var paperSize = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>().FirstOrDefault(e => e.PaperName == "A5");
             IEnumerable<PaperSize> paperSizes = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>();
             PaperSize sizeA5 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A5);
-            printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = sizeA5;
+            MessageBox.Show("Width : "+paperSize.Width+" Height : "+paperSize.Height);
+            printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = paperSize;
             printPreviewDialog1.Document = printDocument1;
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewDialog1.ShowDialog();
@@ -49,12 +50,22 @@ namespace Yess_Express___Desktop_App
         }
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Rectangle pagearea = e.PageBounds;
-            e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.panelPrint.Width / 2), this.panelPrint.Location.Y);
-            e.Graphics.DrawImage(memoryimg, 0, 0);
+            Rectangle pagearea = e.MarginBounds;
+            // e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.panelPrint.Width / 2), this.panelPrint.Location.Y);
+            //e.Graphics.DrawImage(memoryimg, this.panelPrint.Location.X, this.panelPrint.Location.Y);
+            //e.Graphics.DrawImage(memoryimg, -10, -50);
             /*Bitmap b = new Bitmap(panelPrint.Width-20, panelPrint.Height-20);
             panelPrint.DrawToBitmap(b, new System.Drawing.Rectangle(0, 0, panelPrint.Width, panelPrint.Height));
             e.Graphics.DrawImage(b, -20, -40);*/
+            if ((double)memoryimg.Width / (double)memoryimg.Height > (double)pagearea.Width / (double)pagearea.Height) // image is wider
+            {
+                pagearea.Height = (int)((double)memoryimg.Height / (double)memoryimg.Width * (double)pagearea.Width);
+            }
+            else
+            {
+                pagearea.Width = (int)((double)memoryimg.Width / (double)memoryimg.Height * (double)pagearea.Height);
+            }
+            e.Graphics.DrawImage(memoryimg, pagearea);
         }
         private void getPrintArea(Panel pnl)
         {
@@ -100,6 +111,8 @@ namespace Yess_Express___Desktop_App
             labelAmountReceived.Text = amountReceived;
             labelPaymentMethod.Text = paymentMethod;
             labelSpecialInstructions.Text = specialInstruction;
+            labelShipperTIN.Text = shipper_tin;
+            labelConsigneeTIN.Text = consignee_tin;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

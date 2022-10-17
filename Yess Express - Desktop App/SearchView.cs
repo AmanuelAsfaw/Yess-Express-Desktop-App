@@ -34,8 +34,8 @@ namespace Yess_Express___Desktop_App
             string searchKey = textBoxSearch.Text;
             if (textBoxSearch.Text != null && textBoxSearch.Text.Length > 2) {
                 string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey+ "%' OR Phone like '%"+searchKey+
-                    "%' OR CompanyNamdeAddress like '%" + searchKey+ "%' OR consignee_phone like '" + searchKey+ 
-                    "' OR consignee_contact_person like '"+searchKey+ "' OR consignee_company_name_address like '"+searchKey+"';";
+                    "%' OR CompanyNamdeAddress like '%" + searchKey+ "%' OR consignee_phone like '" + searchKey + "'Senders.ShiiperTIN'" + searchKey + "'ConsigneeTIN'" + searchKey +
+                    "' OR consignee_contact_person like '" +searchKey+ "' OR consignee_company_name_address like '"+searchKey+"';";
                 LoadWithQuery(query);
             }
         }
@@ -66,16 +66,17 @@ namespace Yess_Express___Desktop_App
                                     read.GetValue(3).ToString(), read.GetValue(4).ToString(), read.GetValue(5).ToString(), Double.Parse(read.GetValue(6).ToString()), Double.Parse(read.GetValue(7).ToString()),
                                     Double.Parse(read.GetValue(8).ToString()), Double.Parse(read.GetValue(9).ToString()), Double.Parse(read.GetValue(10).ToString()), Double.Parse(read.GetValue(11).ToString()),read.GetValue(12).ToString(), read.GetValue(13).ToString(),
                                     read.GetValue(14).ToString(), read.GetValue(15).ToString(), read.GetValue(16).ToString(), read.GetValue(17).ToString(),
-                                    read.GetValue(18).ToString(), int.Parse(read.GetValue(19).ToString()), read.GetValue(20).ToString(), read.GetValue(21).ToString()));
+                                    read.GetValue(18).ToString(), int.Parse(read.GetValue(19).ToString()), read.GetValue(20).ToString(), read.GetValue(21).ToString(), read.GetValue(28).ToString(), read.GetValue(22).ToString()));
 
                                 int rowIndex = dataGridViewSearchResult.Rows.Add(new object[]
                                 {
                                     print_button,
                                     use_button,
                                     read.GetValue(1), // Tracking No
-                                    read.GetValue(24), // Sender-Name
-                                    read.GetValue(25), // Sender-Phone
-                                    read.GetValue(26), // Sender-Company
+                                    read.GetValue(25), // Sender-Name
+                                    read.GetValue(26), // Sender-Phone
+                                    read.GetValue(28), // Shipper-TIN
+                                    read.GetValue(27), // Sender-Company
                                     read.GetValue(4), // YesExpress -Receiver
                                     read.GetValue(6), // Killo
                                     read.GetValue(7), // Gram
@@ -86,6 +87,7 @@ namespace Yess_Express___Desktop_App
                                     read.GetValue(12), // Goods Desc
                                     read.GetValue(13), // Contact Person
                                     read.GetValue(14), // Consignee Phone
+                                    read.GetValue(22), // Consignee TIN
                                     read.GetValue(15), // Consignee Compny
                                     read.GetValue(17), // Receiver
                                     read.GetValue(18), // Service Type
@@ -128,7 +130,7 @@ namespace Yess_Express___Desktop_App
                         billList[row_index].ItemVolum, billList[row_index].DescriptionOfGoods, billList[row_index].ConsigneeContactPerson,
                         billList[row_index].ConsigneePhone, billList[row_index].ConsigneeCompanyNameAndAddress, billList[row_index].ConsigneeReceivedDateTime,
                         billList[row_index].ReceiverName, billList[row_index].ServiceType, billList[row_index].AmountReceived,
-                        billList[row_index].PaymentMethod, billList[row_index].SpecialInstructions);
+                        billList[row_index].PaymentMethod, billList[row_index].SpecialInstructions, billList[row_index].ShipperTIN, billList[row_index].ConsigneeTIN);
                     BillForm billForm = new BillForm(this.rootWindow, billModel);
                     this.rootWindow.change_to_new_bill_form(billForm);
                 } catch { }
@@ -161,6 +163,8 @@ namespace Yess_Express___Desktop_App
                     printView.amountReceived = billList[row_index].AmountReceived.ToString();
                     printView.paymentMethod = billList[row_index].PaymentMethod.ToString();
                     printView.specialInstruction = billList[row_index].SpecialInstructions.ToString();
+                    printView.shipper_tin = billList[row_index].ShipperTIN.ToString();
+                    printView.consignee_tin = billList[row_index].ConsigneeTIN.ToString();
                     this.rootWindow.change_to_print_view(printView);
                 }
                 catch { }

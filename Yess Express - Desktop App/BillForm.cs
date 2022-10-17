@@ -147,12 +147,22 @@ namespace Yess_Express___Desktop_App
 
         private void buttonSaveBill_Click(object sender, EventArgs e)
         {
+            if(Settings1.Default.prvs_trackingno >= Settings1.Default.end_trck_no)
+            {
+                DialogResult res = MessageBox.Show("Tracking No outoff range.");
+                return;
+            }
+            if (Settings1.Default.prvs_trackingno < Settings1.Default.strt_trck_no-1)
+            {
+                DialogResult res = MessageBox.Show("Tracking No outoff range.");
+                return;
+            }
             int current_tracking_no = Settings1.Default.prvs_trackingno + 1;
             var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
             string db_str;
             db_str = ConfigurationManager.AppSettings.Get("DatabaseString");
             try {
-                string sender_query = "INSERT INTO Senders (Name, Phone, CompanyNamdeAddress) VALUES (@Name, @Phone, @CompanyNamdeAddress)";
+                string sender_query = "INSERT INTO Senders (Name, Phone, CompanyNamdeAddress, ShipperTIN) VALUES (@Name, @Phone, @CompanyNamdeAddress, @ShipperTIN)";
                 
 
                 using(SQLiteConnection conn = new SQLiteConnection("Data Source=NewDatabase.db;"))
@@ -170,6 +180,7 @@ namespace Yess_Express___Desktop_App
                             cmd.Parameters.Add(new SQLiteParameter("@Name", textBoxNameOfSender.Text));
                             cmd.Parameters.Add(new SQLiteParameter("@Phone", textBoxSenderPhone.Text));
                             cmd.Parameters.Add(new SQLiteParameter("@CompanyNamdeAddress", textBoxSenderCompanyNameAndAddress.Text));
+                            cmd.Parameters.Add(new SQLiteParameter("@ShipperTIN", textBoxShipperTIN.Text));
                             int Status_ = cmd.ExecuteNonQuery();
                             cmd.CommandText = "select last_insert_rowid()";
                             Int64 LastRowID64 = (Int64)cmd.ExecuteScalar();
@@ -177,11 +188,11 @@ namespace Yess_Express___Desktop_App
                         }
                         
                         string bill_query = "insert into Bills (tracking_no,sender_id, shipper_signed_date, yes_express_receiver, yes_express_received_datetime, item_killo, item_gram, item_length, item_width, " +
-                            "item_height, item_volum, description_of_goods, consignee_contact_person,consignee_phone, consignee_company_name_address, consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions) values(" +
+                            "item_height, item_volum, description_of_goods, consignee_contact_person,consignee_phone, consignee_company_name_address, consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions, ConsigneeTIN) values(" +
                             current_tracking_no + ",'" + LastRowID.ToString() + "','" + dateTimePickerShiipperDate.Text + "','" + textBoxReceiverOnExpress.Text + "','" + dateTimePickerReceivedDateTime.Text + " : " + timePickerReceivedTime.Text + "'," +
                             Double.Parse(textBoxKillo.Text) + "," + Double.Parse(textBoxGram.Text) + "," + Double.Parse(textBoxLength.Text) + "," + Double.Parse(textBoxWidth.Text) + "," + Double.Parse(textBoxHeight.Text) + "," + Double.Parse(labelForVolum.Text) + ",'" + textBoxGoodsDescription.Text + "','" +
                             textBoxReceiverContactPerson.Text + "','" + textBoxReceiverPhone.Text + "','" + textBoxReceiverCompanyNameAndAddress.Text + "','" + dateTimePickerReceiverConsignee.Text + " : " + timePickerReceiverConsignee.Text + "','" + textBoxReceiverName.Text + "','" + comboBoxServiceType.Text + "'," + Double.Parse(textBoxAmountReceived.Text) + ",'" +
-                            comboBoxPaymentMethod.Text + "','" + textBoxSpecialInstructions.Text + "')";
+                            comboBoxPaymentMethod.Text + "','" + textBoxSpecialInstructions.Text + "','" + textBoxConsigneeTIN.Text + "')";
                         Console.WriteLine(bill_query);
                         cmd.CommandText = bill_query;
                         cmd.ExecuteNonQuery();
@@ -217,6 +228,8 @@ namespace Yess_Express___Desktop_App
                 printView.amountReceived = textBoxAmountReceived.Text;
                 printView.paymentMethod = comboBoxPaymentMethod.Text;
                 printView.specialInstruction = textBoxSpecialInstructions.Text;
+                printView.shipper_tin = textBoxShipperTIN.Text;
+                printView.consignee_tin = textBoxConsigneeTIN.Text;
                 rootWindow.change_to_print_view(printView);
             }
             catch (Exception ex)

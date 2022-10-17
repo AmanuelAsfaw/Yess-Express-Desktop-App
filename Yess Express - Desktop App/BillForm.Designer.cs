@@ -107,6 +107,10 @@ namespace Yess_Express___Desktop_App
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSaveBill = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBoxShipperTIN = new System.Windows.Forms.TextBox();
+            this.textBoxConsigneeTIN = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -134,6 +138,8 @@ namespace Yess_Express___Desktop_App
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBoxShipperTIN);
+            this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.textBoxGoodsDescription);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.panel17);
@@ -400,15 +406,15 @@ namespace Yess_Express___Desktop_App
             this.panel10.Controls.Add(this.dateTimePickerShiipperDate);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.panel15);
-            this.panel10.Location = new System.Drawing.Point(0, 221);
+            this.panel10.Location = new System.Drawing.Point(0, 262);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(699, 104);
+            this.panel10.Size = new System.Drawing.Size(699, 63);
             this.panel10.TabIndex = 3;
             // 
             // dateTimePickerShiipperDate
             // 
             this.dateTimePickerShiipperDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerShiipperDate.Location = new System.Drawing.Point(361, 45);
+            this.dateTimePickerShiipperDate.Location = new System.Drawing.Point(361, 30);
             this.dateTimePickerShiipperDate.Name = "dateTimePickerShiipperDate";
             this.dateTimePickerShiipperDate.Size = new System.Drawing.Size(275, 27);
             this.dateTimePickerShiipperDate.TabIndex = 2;
@@ -447,14 +453,14 @@ namespace Yess_Express___Desktop_App
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.textBoxSenderCompanyNameAndAddress);
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(-1, 101);
+            this.panel8.Location = new System.Drawing.Point(-1, 151);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(700, 120);
+            this.panel8.Size = new System.Drawing.Size(700, 107);
             this.panel8.TabIndex = 2;
             // 
             // textBoxSenderCompanyNameAndAddress
             // 
-            this.textBoxSenderCompanyNameAndAddress.Location = new System.Drawing.Point(3, 36);
+            this.textBoxSenderCompanyNameAndAddress.Location = new System.Drawing.Point(3, 27);
             this.textBoxSenderCompanyNameAndAddress.Multiline = true;
             this.textBoxSenderCompanyNameAndAddress.Name = "textBoxSenderCompanyNameAndAddress";
             this.textBoxSenderCompanyNameAndAddress.Size = new System.Drawing.Size(692, 79);
@@ -464,7 +470,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(7, 13);
+            this.label8.Location = new System.Drawing.Point(3, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(202, 20);
             this.label8.TabIndex = 0;
@@ -581,6 +587,8 @@ namespace Yess_Express___Desktop_App
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.textBoxConsigneeTIN);
+            this.panel3.Controls.Add(this.label32);
             this.panel3.Controls.Add(this.textBoxSpecialInstructions);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.panel21);
@@ -739,15 +747,15 @@ namespace Yess_Express___Desktop_App
             this.panel11.Controls.Add(this.dateTimePickerReceiverConsignee);
             this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.panel19);
-            this.panel11.Location = new System.Drawing.Point(-1, 221);
+            this.panel11.Location = new System.Drawing.Point(-1, 262);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(752, 104);
+            this.panel11.Size = new System.Drawing.Size(752, 63);
             this.panel11.TabIndex = 3;
             // 
             // timePickerReceiverConsignee
             // 
             this.timePickerReceiverConsignee.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePickerReceiverConsignee.Location = new System.Drawing.Point(532, 7);
+            this.timePickerReceiverConsignee.Location = new System.Drawing.Point(532, 3);
             this.timePickerReceiverConsignee.Name = "timePickerReceiverConsignee";
             this.timePickerReceiverConsignee.Size = new System.Drawing.Size(160, 23);
             this.timePickerReceiverConsignee.TabIndex = 3;
@@ -755,7 +763,7 @@ namespace Yess_Express___Desktop_App
             // dateTimePickerReceiverConsignee
             // 
             this.dateTimePickerReceiverConsignee.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerReceiverConsignee.Location = new System.Drawing.Point(404, 45);
+            this.dateTimePickerReceiverConsignee.Location = new System.Drawing.Point(404, 27);
             this.dateTimePickerReceiverConsignee.Name = "dateTimePickerReceiverConsignee";
             this.dateTimePickerReceiverConsignee.Size = new System.Drawing.Size(288, 27);
             this.dateTimePickerReceiverConsignee.TabIndex = 2;
@@ -794,14 +802,14 @@ namespace Yess_Express___Desktop_App
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.textBoxReceiverCompanyNameAndAddress);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Location = new System.Drawing.Point(-1, 101);
+            this.panel9.Location = new System.Drawing.Point(-1, 151);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(752, 120);
+            this.panel9.Size = new System.Drawing.Size(752, 113);
             this.panel9.TabIndex = 2;
             // 
             // textBoxReceiverCompanyNameAndAddress
             // 
-            this.textBoxReceiverCompanyNameAndAddress.Location = new System.Drawing.Point(3, 36);
+            this.textBoxReceiverCompanyNameAndAddress.Location = new System.Drawing.Point(3, 27);
             this.textBoxReceiverCompanyNameAndAddress.Multiline = true;
             this.textBoxReceiverCompanyNameAndAddress.Name = "textBoxReceiverCompanyNameAndAddress";
             this.textBoxReceiverCompanyNameAndAddress.Size = new System.Drawing.Size(744, 79);
@@ -811,7 +819,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(8, 4);
+            this.label9.Location = new System.Drawing.Point(10, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 20);
             this.label9.TabIndex = 0;
@@ -906,6 +914,42 @@ namespace Yess_Express___Desktop_App
             this.buttonSaveBill.Text = "Save";
             this.buttonSaveBill.UseVisualStyleBackColor = false;
             this.buttonSaveBill.Click += new System.EventHandler(this.buttonSaveBill_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label29.Location = new System.Drawing.Point(11, 120);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(106, 20);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Customer TIN :";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label32.Location = new System.Drawing.Point(8, 120);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(106, 20);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "Customer TIN :";
+            // 
+            // textBoxShipperTIN
+            // 
+            this.textBoxShipperTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxShipperTIN.Location = new System.Drawing.Point(123, 117);
+            this.textBoxShipperTIN.Name = "textBoxShipperTIN";
+            this.textBoxShipperTIN.Size = new System.Drawing.Size(434, 27);
+            this.textBoxShipperTIN.TabIndex = 7;
+            // 
+            // textBoxConsigneeTIN
+            // 
+            this.textBoxConsigneeTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxConsigneeTIN.Location = new System.Drawing.Point(120, 120);
+            this.textBoxConsigneeTIN.Name = "textBoxConsigneeTIN";
+            this.textBoxConsigneeTIN.Size = new System.Drawing.Size(486, 27);
+            this.textBoxConsigneeTIN.TabIndex = 8;
             // 
             // BillForm
             // 
@@ -1045,5 +1089,9 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Button buttonSaveBill;
         private System.Windows.Forms.DateTimePicker timePickerReceivedTime;
         private System.Windows.Forms.DateTimePicker timePickerReceiverConsignee;
+        private System.Windows.Forms.TextBox textBoxShipperTIN;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBoxConsigneeTIN;
+        private System.Windows.Forms.Label label32;
     }
 }

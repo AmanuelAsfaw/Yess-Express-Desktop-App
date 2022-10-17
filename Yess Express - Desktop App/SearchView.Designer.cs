@@ -37,6 +37,7 @@ namespace Yess_Express___Desktop_App
             this.tracking_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sender_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sender_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShipperTIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sender_company_name_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yes_exppress_receiver = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.item_killo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +49,7 @@ namespace Yess_Express___Desktop_App
             this.descriptions_of_goods = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consignee_contact_person = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consignee_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsigneeTIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consignee_company_name_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiver_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.service_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +87,7 @@ namespace Yess_Express___Desktop_App
             this.tracking_no,
             this.sender_name,
             this.sender_phone,
+            this.ShipperTIN,
             this.sender_company_name_address,
             this.yes_exppress_receiver,
             this.item_killo,
@@ -96,6 +99,7 @@ namespace Yess_Express___Desktop_App
             this.descriptions_of_goods,
             this.consignee_contact_person,
             this.consignee_phone,
+            this.ConsigneeTIN,
             this.consignee_company_name_address,
             this.receiver_name,
             this.service_type,
@@ -140,6 +144,11 @@ namespace Yess_Express___Desktop_App
             // 
             this.sender_phone.HeaderText = "SenderPhone";
             this.sender_phone.Name = "sender_phone";
+            // 
+            // ShipperTIN
+            // 
+            this.ShipperTIN.HeaderText = "ShipperTIN";
+            this.ShipperTIN.Name = "ShipperTIN";
             // 
             // sender_company_name_address
             // 
@@ -195,6 +204,11 @@ namespace Yess_Express___Desktop_App
             // 
             this.consignee_phone.HeaderText = "Phone";
             this.consignee_phone.Name = "consignee_phone";
+            // 
+            // ConsigneeTIN
+            // 
+            this.ConsigneeTIN.HeaderText = "ConsigneeTIN";
+            this.ConsigneeTIN.Name = "ConsigneeTIN";
             // 
             // consignee_company_name_address
             // 
@@ -254,6 +268,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.DataGridViewTextBoxColumn tracking_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn sender_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn sender_phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShipperTIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn sender_company_name_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn yes_exppress_receiver;
         private System.Windows.Forms.DataGridViewTextBoxColumn item_killo;
@@ -265,6 +280,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptions_of_goods;
         private System.Windows.Forms.DataGridViewTextBoxColumn consignee_contact_person;
         private System.Windows.Forms.DataGridViewTextBoxColumn consignee_phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsigneeTIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn consignee_company_name_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiver_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn service_type;
