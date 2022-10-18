@@ -41,8 +41,19 @@ namespace Yess_Express___Desktop_App
             var paperSize = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>().FirstOrDefault(e => e.PaperName == "A5");
             IEnumerable<PaperSize> paperSizes = printDocument1.PrinterSettings.PaperSizes.Cast<PaperSize>();
             PaperSize sizeA5 = paperSizes.First<PaperSize>(size => size.Kind == PaperKind.A5);
-            MessageBox.Show("Width : "+paperSize.Width+" Height : "+paperSize.Height);
-            printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = paperSize;
+            //printDocument1.PrinterSettings.DefaultPageSettings.PaperSize = paperSize;
+
+            for (int i = 0; i < printDocument1.PrinterSettings.PaperSizes.Count; i++)
+            {
+                //NASSIM LOUCHANI
+
+                if (printDocument1.PrinterSettings.PaperSizes[i].RawKind == 11)
+                {
+                    MessageBox.Show("Width : " + printDocument1.PrinterSettings.PaperSizes[i].Width + " Height : " + printDocument1.PrinterSettings.PaperSizes[i].Height);
+                    printDocument1.DefaultPageSettings.PaperSize = printDocument1.PrinterSettings.PaperSizes[i];
+                }
+            }
+
             printPreviewDialog1.Document = printDocument1;
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewDialog1.ShowDialog();
@@ -65,12 +76,20 @@ namespace Yess_Express___Desktop_App
             {
                 pagearea.Width = (int)((double)memoryimg.Width / (double)memoryimg.Height * (double)pagearea.Height);
             }
+            pagearea.Height = Convert.ToInt32(pagearea.Height * 1.55);
+            pagearea.Width = Convert.ToInt32(pagearea.Width * 1.55);
+            pagearea.X = 20;
+            pagearea.Y = 20;
+
+            MessageBox.Show("Width :: " + pagearea.Width + " Height :: " + pagearea.Height);
             e.Graphics.DrawImage(memoryimg, pagearea);
         }
         private void getPrintArea(Panel pnl)
         {
             memoryimg = new Bitmap(pnl.Width, pnl.Height);
-            pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, pnl.Width, pnl.Height));
+            pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, Convert.ToInt32(pnl.Width*1.5) , Convert.ToInt32(pnl.Height*1.5)));
+
+            MessageBox.Show("Width ::: " + Convert.ToInt32(pnl.Width * .75)  + " Height ::: " + Convert.ToInt32(pnl.Height * .75));
         }
 
         public PrintView()

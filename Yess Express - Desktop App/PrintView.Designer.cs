@@ -190,7 +190,7 @@ namespace Yess_Express___Desktop_App
             this.panelPrint.Location = new System.Drawing.Point(12, 47);
             this.panelPrint.Name = "panelPrint";
             this.panelPrint.Padding = new System.Windows.Forms.Padding(300, 100, 0, 0);
-            this.panelPrint.Size = new System.Drawing.Size(1177, 836);
+            this.panelPrint.Size = new System.Drawing.Size(1241, 875);
             this.panelPrint.TabIndex = 0;
             // 
             // checkBox4
