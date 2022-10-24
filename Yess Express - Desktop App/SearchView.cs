@@ -62,7 +62,7 @@ namespace Yess_Express___Desktop_App
                                 Button print_button = new Button();
                                 print_button.Text = "Print";
                                 billList.Add(new BillModel(
-                                    int.Parse(read.GetValue(0).ToString()), read.GetValue(1).ToString(), int.Parse(read.GetValue(2).ToString()), read.GetValue(24).ToString(), read.GetValue(25).ToString(), read.GetValue(26).ToString(), 
+                                    int.Parse(read.GetValue(0).ToString()), read.GetValue(1).ToString(), int.Parse(read.GetValue(2).ToString()), read.GetValue(25).ToString(), read.GetValue(26).ToString(), read.GetValue(27).ToString(), 
                                     read.GetValue(3).ToString(), read.GetValue(4).ToString(), read.GetValue(5).ToString(), Double.Parse(read.GetValue(6).ToString()), Double.Parse(read.GetValue(7).ToString()),
                                     Double.Parse(read.GetValue(8).ToString()), Double.Parse(read.GetValue(9).ToString()), Double.Parse(read.GetValue(10).ToString()), Double.Parse(read.GetValue(11).ToString()),read.GetValue(12).ToString(), read.GetValue(13).ToString(),
                                     read.GetValue(14).ToString(), read.GetValue(15).ToString(), read.GetValue(16).ToString(), read.GetValue(17).ToString(),

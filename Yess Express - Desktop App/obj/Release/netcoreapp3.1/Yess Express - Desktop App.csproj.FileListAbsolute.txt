@@ -1,4 +1,5 @@
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.exe
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.dll.config
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.deps.json
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.runtimeconfig.json
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.runtimeconfig.dev.json
@@ -20,8 +21,13 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.BillForm.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.Form1.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.MainWindow.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.PrintView.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.Properties.Resources.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.ReportView.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.ResetAppSettings.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.SearchView.resources
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.SettingsForm.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.csproj.GenerateResource.cache
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.AssemblyInfoInputs.cache
@@ -31,10 +37,4 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.dll
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.pdb
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.genruntimeconfig.cache
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\bin\Release\netcoreapp3.1\Yess Express - Desktop App.dll.config
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.MainWindow.resources
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.ReportView.resources
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.ResetAppSettings.resources
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.SearchView.resources
-C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.SettingsForm.resources
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.csproj.AssemblyReference.cache

@@ -49,7 +49,6 @@ namespace Yess_Express___Desktop_App
 
                 if (printDocument1.PrinterSettings.PaperSizes[i].RawKind == 11)
                 {
-                    MessageBox.Show("Width : " + printDocument1.PrinterSettings.PaperSizes[i].Width + " Height : " + printDocument1.PrinterSettings.PaperSizes[i].Height);
                     printDocument1.DefaultPageSettings.PaperSize = printDocument1.PrinterSettings.PaperSizes[i];
                 }
             }
@@ -76,20 +75,17 @@ namespace Yess_Express___Desktop_App
             {
                 pagearea.Width = (int)((double)memoryimg.Width / (double)memoryimg.Height * (double)pagearea.Height);
             }
-            pagearea.Height = Convert.ToInt32(pagearea.Height * 1.55);
+            pagearea.Height = Convert.ToInt32(pagearea.Height * 1.35);
             pagearea.Width = Convert.ToInt32(pagearea.Width * 1.55);
             pagearea.X = 20;
-            pagearea.Y = 20;
+            pagearea.Y = -10;
 
-            MessageBox.Show("Width :: " + pagearea.Width + " Height :: " + pagearea.Height);
             e.Graphics.DrawImage(memoryimg, pagearea);
         }
         private void getPrintArea(Panel pnl)
         {
             memoryimg = new Bitmap(pnl.Width, pnl.Height);
             pnl.DrawToBitmap(memoryimg, new Rectangle(0, 0, Convert.ToInt32(pnl.Width*1.5) , Convert.ToInt32(pnl.Height*1.5)));
-
-            MessageBox.Show("Width ::: " + Convert.ToInt32(pnl.Width * .75)  + " Height ::: " + Convert.ToInt32(pnl.Height * .75));
         }
 
         public PrintView()

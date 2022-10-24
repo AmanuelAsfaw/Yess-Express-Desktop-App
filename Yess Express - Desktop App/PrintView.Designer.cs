@@ -190,14 +190,14 @@ namespace Yess_Express___Desktop_App
             this.panelPrint.Location = new System.Drawing.Point(12, 47);
             this.panelPrint.Name = "panelPrint";
             this.panelPrint.Padding = new System.Windows.Forms.Padding(300, 100, 0, 0);
-            this.panelPrint.Size = new System.Drawing.Size(1241, 875);
+            this.panelPrint.Size = new System.Drawing.Size(1076, 796);
             this.panelPrint.TabIndex = 0;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(807, 769);
+            this.checkBox4.Location = new System.Drawing.Point(788, 753);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(142, 24);
             this.checkBox4.TabIndex = 29;
@@ -208,7 +208,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(522, 769);
+            this.checkBox3.Location = new System.Drawing.Point(515, 753);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(122, 24);
             this.checkBox3.TabIndex = 28;
@@ -219,7 +219,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(275, 769);
+            this.checkBox2.Location = new System.Drawing.Point(259, 753);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(103, 24);
             this.checkBox2.TabIndex = 27;
@@ -231,7 +231,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(34, 769);
+            this.checkBox1.Location = new System.Drawing.Point(44, 753);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(91, 24);
             this.checkBox1.TabIndex = 26;

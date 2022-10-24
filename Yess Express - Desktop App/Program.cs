@@ -18,8 +18,6 @@ namespace Yess_Express___Desktop_App
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Settings1.Default.DatabaseCreated = true;
-            Settings1.Default.Save();
             if (!Settings1.Default.DatabaseCreated) 
             {
                 CreateDB();

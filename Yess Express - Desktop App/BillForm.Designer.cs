@@ -32,6 +32,8 @@ namespace Yess_Express___Desktop_App
             this.components = new System.ComponentModel.Container();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxShipperTIN = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.textBoxGoodsDescription = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -76,6 +78,8 @@ namespace Yess_Express___Desktop_App
             this.textBoxTrackingNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxConsigneeTIN = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.textBoxSpecialInstructions = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -107,10 +111,7 @@ namespace Yess_Express___Desktop_App
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSaveBill = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBoxShipperTIN = new System.Windows.Forms.TextBox();
-            this.textBoxConsigneeTIN = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -152,6 +153,24 @@ namespace Yess_Express___Desktop_App
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1450, 696);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxShipperTIN
+            // 
+            this.textBoxShipperTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxShipperTIN.Location = new System.Drawing.Point(123, 117);
+            this.textBoxShipperTIN.Name = "textBoxShipperTIN";
+            this.textBoxShipperTIN.Size = new System.Drawing.Size(434, 27);
+            this.textBoxShipperTIN.TabIndex = 7;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label29.Location = new System.Drawing.Point(11, 120);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(106, 20);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Customer TIN :";
             // 
             // textBoxGoodsDescription
             // 
@@ -536,6 +555,7 @@ namespace Yess_Express___Desktop_App
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Orange;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(-1, -1);
@@ -546,10 +566,11 @@ namespace Yess_Express___Desktop_App
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(291, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "SHIPPER DETAILS";
             // 
@@ -601,6 +622,24 @@ namespace Yess_Express___Desktop_App
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(752, 696);
             this.panel3.TabIndex = 0;
+            // 
+            // textBoxConsigneeTIN
+            // 
+            this.textBoxConsigneeTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxConsigneeTIN.Location = new System.Drawing.Point(120, 120);
+            this.textBoxConsigneeTIN.Name = "textBoxConsigneeTIN";
+            this.textBoxConsigneeTIN.Size = new System.Drawing.Size(486, 27);
+            this.textBoxConsigneeTIN.TabIndex = 8;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label32.Location = new System.Drawing.Point(8, 120);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(106, 20);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "Customer TIN :";
             // 
             // textBoxSpecialInstructions
             // 
@@ -885,8 +924,11 @@ namespace Yess_Express___Desktop_App
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Orange;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label2);
+            this.panel5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel5.ForeColor = System.Drawing.Color.Red;
             this.panel5.Location = new System.Drawing.Point(-1, -1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(752, 40);
@@ -895,19 +937,20 @@ namespace Yess_Express___Desktop_App
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(309, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.Size = new System.Drawing.Size(190, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "CONSIGNEE DETAILS";
             // 
             // buttonSaveBill
             // 
-            this.buttonSaveBill.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonSaveBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSaveBill.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonSaveBill.BackColor = System.Drawing.Color.Red;
+            this.buttonSaveBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveBill.ForeColor = System.Drawing.Color.Orange;
             this.buttonSaveBill.Location = new System.Drawing.Point(833, 830);
+            this.buttonSaveBill.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSaveBill.Name = "buttonSaveBill";
             this.buttonSaveBill.Size = new System.Drawing.Size(96, 40);
             this.buttonSaveBill.TabIndex = 1;
@@ -915,41 +958,13 @@ namespace Yess_Express___Desktop_App
             this.buttonSaveBill.UseVisualStyleBackColor = false;
             this.buttonSaveBill.Click += new System.EventHandler(this.buttonSaveBill_Click);
             // 
-            // label29
+            // panel22
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(11, 120);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(106, 20);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Customer TIN :";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(8, 120);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(106, 20);
-            this.label32.TabIndex = 7;
-            this.label32.Text = "Customer TIN :";
-            // 
-            // textBoxShipperTIN
-            // 
-            this.textBoxShipperTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxShipperTIN.Location = new System.Drawing.Point(123, 117);
-            this.textBoxShipperTIN.Name = "textBoxShipperTIN";
-            this.textBoxShipperTIN.Size = new System.Drawing.Size(434, 27);
-            this.textBoxShipperTIN.TabIndex = 7;
-            // 
-            // textBoxConsigneeTIN
-            // 
-            this.textBoxConsigneeTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxConsigneeTIN.Location = new System.Drawing.Point(120, 120);
-            this.textBoxConsigneeTIN.Name = "textBoxConsigneeTIN";
-            this.textBoxConsigneeTIN.Size = new System.Drawing.Size(486, 27);
-            this.textBoxConsigneeTIN.TabIndex = 8;
+            this.panel22.BackColor = System.Drawing.Color.Orange;
+            this.panel22.Location = new System.Drawing.Point(0, 806);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(1492, 75);
+            this.panel22.TabIndex = 2;
             // 
             // BillForm
             // 
@@ -958,6 +973,7 @@ namespace Yess_Express___Desktop_App
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1493, 882);
             this.Controls.Add(this.buttonSaveBill);
+            this.Controls.Add(this.panel22);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BillForm";
@@ -1093,5 +1109,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBoxConsigneeTIN;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Panel panel22;
     }
 }

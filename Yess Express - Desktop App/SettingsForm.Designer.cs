@@ -36,6 +36,8 @@ namespace Yess_Express___Desktop_App
             this.buttonSaveData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxPrivousTrakcingNo = new System.Windows.Forms.TextBox();
+            this.checkBoxNewDatabase = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelStartForTrackingNo
@@ -107,11 +109,37 @@ namespace Yess_Express___Desktop_App
             this.textBoxPrivousTrakcingNo.Size = new System.Drawing.Size(292, 27);
             this.textBoxPrivousTrakcingNo.TabIndex = 6;
             // 
+            // checkBoxNewDatabase
+            // 
+            this.checkBoxNewDatabase.AutoSize = true;
+            this.checkBoxNewDatabase.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxNewDatabase.Location = new System.Drawing.Point(124, 475);
+            this.checkBoxNewDatabase.Name = "checkBoxNewDatabase";
+            this.checkBoxNewDatabase.Size = new System.Drawing.Size(178, 24);
+            this.checkBoxNewDatabase.TabIndex = 8;
+            this.checkBoxNewDatabase.Text = "Create New Database";
+            this.checkBoxNewDatabase.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(514, 463);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 747);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBoxNewDatabase);
             this.Controls.Add(this.textBoxPrivousTrakcingNo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveData);
@@ -135,5 +163,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Button buttonSaveData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxPrivousTrakcingNo;
+        private System.Windows.Forms.CheckBox checkBoxNewDatabase;
+        private System.Windows.Forms.Button button1;
     }
 }
