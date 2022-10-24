@@ -189,9 +189,9 @@ namespace Yess_Express___Desktop_App
                         
                         string bill_query = "insert into Bills (tracking_no,sender_id, shipper_signed_date, yes_express_receiver, yes_express_received_datetime, item_killo, item_gram, item_length, item_width, " +
                             "item_height, item_volum, description_of_goods, consignee_contact_person,consignee_phone, consignee_company_name_address, consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions, ConsigneeTIN) values(" +
-                            current_tracking_no + ",'" + LastRowID.ToString() + "','" + dateTimePickerShiipperDate.Text + "','" + textBoxReceiverOnExpress.Text + "','" + dateTimePickerReceivedDateTime.Text + " : " + timePickerReceivedTime.Text + "'," +
+                            current_tracking_no + ",'" + LastRowID.ToString() + "','" + dateTimePickerShiipperDate.Value.ToString("dd-MMM-yyyy") + "','" + textBoxReceiverOnExpress.Text + "','" + dateTimePickerReceivedDateTime.Value.ToString("dd-MMM-yyyy") + " : " + timePickerReceivedTime.Text + "'," +
                             Double.Parse(textBoxKillo.Text) + "," + Double.Parse(textBoxGram.Text) + "," + Double.Parse(textBoxLength.Text) + "," + Double.Parse(textBoxWidth.Text) + "," + Double.Parse(textBoxHeight.Text) + "," + Double.Parse(labelForVolum.Text) + ",'" + textBoxGoodsDescription.Text + "','" +
-                            textBoxReceiverContactPerson.Text + "','" + textBoxReceiverPhone.Text + "','" + textBoxReceiverCompanyNameAndAddress.Text + "','" + dateTimePickerReceiverConsignee.Text + " : " + timePickerReceiverConsignee.Text + "','" + textBoxReceiverName.Text + "','" + comboBoxServiceType.Text + "'," + Double.Parse(textBoxAmountReceived.Text) + ",'" +
+                            textBoxReceiverContactPerson.Text + "','" + textBoxReceiverPhone.Text + "','" + textBoxReceiverCompanyNameAndAddress.Text + "','" + dateTimePickerReceiverConsignee.Value.Date.ToString("dd/MM/yyyy") + " : " + timePickerReceiverConsignee.Text + "','" + textBoxReceiverName.Text + "','" + comboBoxServiceType.Text + "'," + Double.Parse(textBoxAmountReceived.Text) + ",'" +
                             comboBoxPaymentMethod.Text + "','" + textBoxSpecialInstructions.Text + "','" + textBoxConsigneeTIN.Text + "')";
                         Console.WriteLine(bill_query);
                         cmd.CommandText = bill_query;
@@ -209,9 +209,9 @@ namespace Yess_Express___Desktop_App
                 printView.senderName = textBoxNameOfSender.Text;
                 printView.senderPhone = textBoxSenderPhone.Text;
                 printView.senderCompanyNameAndAddress = textBoxSenderCompanyNameAndAddress.Text;
-                printView.senderSendDate = dateTimePickerShiipperDate.Text;
+                printView.senderSendDate = dateTimePickerShiipperDate.Value.ToString("dd-MMM-yyyy");
                 printView.yesExpressReceivedPerson = textBoxReceiverOnExpress.Text;
-                printView.yesExpressReceivedDateTime = dateTimePickerReceivedDateTime.Text + " : "+ timePickerReceivedTime.Text;
+                printView.yesExpressReceivedDateTime = dateTimePickerReceivedDateTime.Value.ToString("dd-MMM-yyyy") + " : "+ timePickerReceivedTime.Text;
                 printView.killo = textBoxKillo.Text;
                 printView.gram = textBoxGram.Text;
                 printView.shipmentLength = textBoxLength.Text;
@@ -223,7 +223,7 @@ namespace Yess_Express___Desktop_App
                 printView.consigneePhone = textBoxReceiverPhone.Text;
                 printView.consigneeCompanyNameAndAddress = textBoxReceiverCompanyNameAndAddress.Text;
                 printView.receiverName = textBoxReceiverName.Text;
-                printView.receivedDateTime = dateTimePickerReceiverConsignee.Text+ " : "+ timePickerReceiverConsignee.Text;
+                printView.receivedDateTime = dateTimePickerReceiverConsignee.Value.Date.ToString("dd/MM/yyyy") + " : "+ timePickerReceiverConsignee.Text;
                 printView.receiverServiceType = comboBoxServiceType.Text;
                 printView.amountReceived = textBoxAmountReceived.Text;
                 printView.paymentMethod = comboBoxPaymentMethod.Text;

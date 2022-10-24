@@ -15,6 +15,7 @@ namespace Yess_Express___Desktop_App
         public string senderName, senderPhone, senderCompanyNameAndAddress, senderSendDate, yesExpressReceivedPerson, yesExpressReceivedDateTime, descriptionOfGoods, killo, gram, shipmentLength, shipmentWidth, shipmentHeight, shipmentVolume,
                 consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no, shipper_tin, consignee_tin;
 
+
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -121,7 +122,6 @@ namespace Yess_Express___Desktop_App
             labelConsigneePhone.Text = consigneePhone;
             labelConsigneeCompanyName.Text = consigneeCompanyNameAndAddress;
             labelReceiverName.Text = receiverName;
-            labelReceiverDateTime.Text = receivedDateTime;
             labelServiceType.Text = receiverServiceType;
             labelAmountReceived.Text = amountReceived;
             labelPaymentMethod.Text = paymentMethod;

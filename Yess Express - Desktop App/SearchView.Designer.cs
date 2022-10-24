@@ -61,6 +61,8 @@ namespace Yess_Express___Desktop_App
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
             this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxSearch.Location = new System.Drawing.Point(207, 136);
             this.textBoxSearch.Name = "textBoxSearch";

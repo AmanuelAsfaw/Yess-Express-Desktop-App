@@ -26,7 +26,7 @@ namespace Yess_Express___Desktop_App
         {
             string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id";
             LoadWithQuery(query);
-
+            LoadSenderListToAutoComplete();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -109,6 +109,38 @@ namespace Yess_Express___Desktop_App
             }
             
         }
+        public void LoadSenderListToAutoComplete()
+        {
+            string query = "SELECT * FROM Senders";
+            var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=NewDatabase.db;"))
+                {
+                    conn.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        using (SQLiteDataReader read = cmd.ExecuteReader())
+                        {
+                            AutoCompleteStringCollection autoCompleteStringCollection = new AutoCompleteStringCollection();
+                            while (read.Read())
+                            {
+                                autoCompleteStringCollection.Add(read.GetValue(1).ToString());
+                            }
+                            MessageBox.Show(autoCompleteStringCollection.Count.ToString());
+                            textBoxSearch.AutoCompleteMode = AutoCompleteMode.Suggest;
+                            textBoxSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                            textBoxSearch.AutoCompleteCustomSource = autoCompleteStringCollection; 
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         private void clickhandler(object sender, EventArgs e, string str)
         {
             MessageBox.Show(str);
@@ -170,5 +202,6 @@ namespace Yess_Express___Desktop_App
                 catch { }
             }
         }
+
     }
 }
