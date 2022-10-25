@@ -56,7 +56,7 @@ namespace Yess_Express___Desktop_App
             this.dateTimePickerReceivedDateTime = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBoxReceiverOnExpress = new System.Windows.Forms.TextBox();
+            this.comboBoxYesExpressReceiver = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dateTimePickerShiipperDate = new System.Windows.Forms.DateTimePicker();
@@ -157,36 +157,38 @@ namespace Yess_Express___Desktop_App
             // textBoxShipperTIN
             // 
             this.textBoxShipperTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxShipperTIN.Location = new System.Drawing.Point(123, 117);
+            this.textBoxShipperTIN.Location = new System.Drawing.Point(148, 117);
             this.textBoxShipperTIN.Name = "textBoxShipperTIN";
-            this.textBoxShipperTIN.Size = new System.Drawing.Size(434, 27);
+            this.textBoxShipperTIN.Size = new System.Drawing.Size(336, 27);
             this.textBoxShipperTIN.TabIndex = 7;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(11, 120);
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label29.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label29.Location = new System.Drawing.Point(3, 118);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(106, 20);
+            this.label29.Size = new System.Drawing.Size(139, 25);
             this.label29.TabIndex = 6;
             this.label29.Text = "Customer TIN :";
             // 
             // textBoxGoodsDescription
             // 
-            this.textBoxGoodsDescription.Location = new System.Drawing.Point(361, 428);
+            this.textBoxGoodsDescription.Location = new System.Drawing.Point(361, 439);
             this.textBoxGoodsDescription.Multiline = true;
             this.textBoxGoodsDescription.Name = "textBoxGoodsDescription";
-            this.textBoxGoodsDescription.Size = new System.Drawing.Size(330, 263);
+            this.textBoxGoodsDescription.Size = new System.Drawing.Size(330, 252);
             this.textBoxGoodsDescription.TabIndex = 1;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.DarkOrange;
             this.label20.Location = new System.Drawing.Point(361, 410);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 20);
+            this.label20.Size = new System.Drawing.Size(191, 25);
             this.label20.TabIndex = 1;
             this.label20.Text = "Description of Goods";
             // 
@@ -247,7 +249,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxGram.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxGram.Location = new System.Drawing.Point(61, 67);
             this.textBoxGram.Name = "textBoxGram";
-            this.textBoxGram.Size = new System.Drawing.Size(199, 27);
+            this.textBoxGram.Size = new System.Drawing.Size(129, 27);
             this.textBoxGram.TabIndex = 1;
             this.textBoxGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGram_KeyPress);
             // 
@@ -256,7 +258,7 @@ namespace Yess_Express___Desktop_App
             this.textBoxKillo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxKillo.Location = new System.Drawing.Point(55, 37);
             this.textBoxKillo.Name = "textBoxKillo";
-            this.textBoxKillo.Size = new System.Drawing.Size(173, 27);
+            this.textBoxKillo.Size = new System.Drawing.Size(135, 27);
             this.textBoxKillo.TabIndex = 1;
             this.textBoxKillo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKillo_KeyPress);
             // 
@@ -274,30 +276,33 @@ namespace Yess_Express___Desktop_App
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.DarkOrange;
             this.label28.Location = new System.Drawing.Point(21, 234);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(21, 20);
+            this.label28.Size = new System.Drawing.Size(23, 20);
             this.label28.TabIndex = 1;
             this.label28.Text = "V:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.DarkOrange;
             this.label27.Location = new System.Drawing.Point(21, 204);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(23, 20);
+            this.label27.Size = new System.Drawing.Size(24, 20);
             this.label27.TabIndex = 1;
             this.label27.Text = "H:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.Color.DarkOrange;
             this.label26.Location = new System.Drawing.Point(21, 174);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(26, 20);
+            this.label26.Size = new System.Drawing.Size(28, 20);
             this.label26.TabIndex = 1;
             this.label26.Text = "W:";
             this.label26.Click += new System.EventHandler(this.label26_Click);
@@ -305,20 +310,22 @@ namespace Yess_Express___Desktop_App
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.Color.DarkOrange;
             this.label25.Location = new System.Drawing.Point(21, 142);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 20);
+            this.label25.Size = new System.Drawing.Size(21, 20);
             this.label25.TabIndex = 1;
             this.label25.Text = "L:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.DarkOrange;
             this.label24.Location = new System.Drawing.Point(0, 108);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(228, 20);
+            this.label24.Size = new System.Drawing.Size(241, 20);
             this.label24.TabIndex = 1;
             this.label24.Text = "Dimensional Weight of Shipment";
             this.label24.Click += new System.EventHandler(this.label24_Click);
@@ -326,30 +333,33 @@ namespace Yess_Express___Desktop_App
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.Color.DarkOrange;
             this.label23.Location = new System.Drawing.Point(7, 66);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 20);
+            this.label23.Size = new System.Drawing.Size(52, 20);
             this.label23.TabIndex = 1;
             this.label23.Text = "Gram:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.DarkOrange;
             this.label22.Location = new System.Drawing.Point(7, 37);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(42, 20);
+            this.label22.Size = new System.Drawing.Size(44, 20);
             this.label22.TabIndex = 1;
             this.label22.Text = "Killo:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.Color.DarkOrange;
             this.label21.Location = new System.Drawing.Point(3, 8);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(187, 20);
+            this.label21.Size = new System.Drawing.Size(199, 20);
             this.label21.TabIndex = 1;
             this.label21.Text = "Actual Weight of Shipment";
             // 
@@ -384,38 +394,41 @@ namespace Yess_Express___Desktop_App
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(361, 4);
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label15.Location = new System.Drawing.Point(361, 9);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 20);
+            this.label15.Size = new System.Drawing.Size(111, 20);
             this.label15.TabIndex = 1;
             this.label15.Text = "Date and Time";
             // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel16.Controls.Add(this.textBoxReceiverOnExpress);
+            this.panel16.Controls.Add(this.comboBoxYesExpressReceiver);
             this.panel16.Controls.Add(this.label14);
             this.panel16.Location = new System.Drawing.Point(-1, -1);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(356, 79);
             this.panel16.TabIndex = 0;
             // 
-            // textBoxReceiverOnExpress
+            // comboBoxYesExpressReceiver
             // 
-            this.textBoxReceiverOnExpress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxReceiverOnExpress.Location = new System.Drawing.Point(7, 40);
-            this.textBoxReceiverOnExpress.Name = "textBoxReceiverOnExpress";
-            this.textBoxReceiverOnExpress.Size = new System.Drawing.Size(344, 27);
-            this.textBoxReceiverOnExpress.TabIndex = 1;
+            this.comboBoxYesExpressReceiver.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxYesExpressReceiver.FormattingEnabled = true;
+            this.comboBoxYesExpressReceiver.Location = new System.Drawing.Point(7, 39);
+            this.comboBoxYesExpressReceiver.Name = "comboBoxYesExpressReceiver";
+            this.comboBoxYesExpressReceiver.Size = new System.Drawing.Size(344, 28);
+            this.comboBoxYesExpressReceiver.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(3, 4);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label14.Location = new System.Drawing.Point(3, -1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 20);
+            this.label14.Size = new System.Drawing.Size(246, 25);
             this.label14.TabIndex = 1;
             this.label14.Text = "Received for Yes Express by";
             // 
@@ -441,10 +454,11 @@ namespace Yess_Express___Desktop_App
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(361, 7);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label11.Location = new System.Drawing.Point(361, 3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 20);
+            this.label11.Size = new System.Drawing.Size(52, 25);
             this.label11.TabIndex = 1;
             this.label11.Text = "Date";
             // 
@@ -460,10 +474,11 @@ namespace Yess_Express___Desktop_App
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.DarkOrange;
             this.label10.Location = new System.Drawing.Point(7, 2);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 20);
+            this.label10.Size = new System.Drawing.Size(176, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "Shipper\'s Signature";
             // 
@@ -488,10 +503,11 @@ namespace Yess_Express___Desktop_App
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(3, 4);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.Location = new System.Drawing.Point(0, -1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(202, 20);
+            this.label8.Size = new System.Drawing.Size(257, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Company Name and Address";
             // 
@@ -518,10 +534,11 @@ namespace Yess_Express___Desktop_App
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DarkOrange;
             this.label5.Location = new System.Drawing.Point(362, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.Size = new System.Drawing.Size(66, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Phone";
             // 
@@ -546,10 +563,11 @@ namespace Yess_Express___Desktop_App
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.DarkOrange;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 20);
+            this.label4.Size = new System.Drawing.Size(149, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Name of Sender";
             // 
@@ -598,10 +616,11 @@ namespace Yess_Express___Desktop_App
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(348, 19);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label3.Location = new System.Drawing.Point(303, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 20);
+            this.label3.Size = new System.Drawing.Size(187, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "WayBill/TrackingNo:";
             // 
@@ -626,18 +645,19 @@ namespace Yess_Express___Desktop_App
             // textBoxConsigneeTIN
             // 
             this.textBoxConsigneeTIN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxConsigneeTIN.Location = new System.Drawing.Point(120, 120);
+            this.textBoxConsigneeTIN.Location = new System.Drawing.Point(153, 116);
             this.textBoxConsigneeTIN.Name = "textBoxConsigneeTIN";
-            this.textBoxConsigneeTIN.Size = new System.Drawing.Size(486, 27);
+            this.textBoxConsigneeTIN.Size = new System.Drawing.Size(373, 27);
             this.textBoxConsigneeTIN.TabIndex = 8;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(8, 120);
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label32.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label32.Location = new System.Drawing.Point(8, 116);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(106, 20);
+            this.label32.Size = new System.Drawing.Size(139, 25);
             this.label32.TabIndex = 7;
             this.label32.Text = "Customer TIN :";
             // 
@@ -653,10 +673,11 @@ namespace Yess_Express___Desktop_App
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.DarkOrange;
             this.label18.Location = new System.Drawing.Point(404, 405);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(136, 20);
+            this.label18.Size = new System.Drawing.Size(145, 20);
             this.label18.TabIndex = 1;
             this.label18.Text = "Special Instructions";
             // 
@@ -683,7 +704,7 @@ namespace Yess_Express___Desktop_App
             "FC"});
             this.comboBoxPaymentMethod.Location = new System.Drawing.Point(5, 143);
             this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
-            this.comboBoxPaymentMethod.Size = new System.Drawing.Size(324, 28);
+            this.comboBoxPaymentMethod.Size = new System.Drawing.Size(227, 28);
             this.comboBoxPaymentMethod.TabIndex = 1;
             // 
             // textBoxAmountReceived
@@ -698,20 +719,22 @@ namespace Yess_Express___Desktop_App
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label30.ForeColor = System.Drawing.Color.DarkOrange;
             this.label30.Location = new System.Drawing.Point(10, 113);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(121, 20);
+            this.label30.Size = new System.Drawing.Size(159, 25);
             this.label30.TabIndex = 1;
             this.label30.Text = "Payment Method";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(8, 8);
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label19.Location = new System.Drawing.Point(8, 3);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(126, 20);
+            this.label19.Size = new System.Drawing.Size(163, 25);
             this.label19.TabIndex = 1;
             this.label19.Text = "Amount Received";
             // 
@@ -738,16 +761,17 @@ namespace Yess_Express___Desktop_App
             "Other"});
             this.comboBoxServiceType.Location = new System.Drawing.Point(404, 39);
             this.comboBoxServiceType.Name = "comboBoxServiceType";
-            this.comboBoxServiceType.Size = new System.Drawing.Size(328, 28);
+            this.comboBoxServiceType.Size = new System.Drawing.Size(268, 28);
             this.comboBoxServiceType.TabIndex = 1;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(399, 4);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label17.Location = new System.Drawing.Point(403, 4);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 20);
+            this.label17.Size = new System.Drawing.Size(120, 25);
             this.label17.TabIndex = 1;
             this.label17.Text = "Service Type";
             // 
@@ -772,10 +796,11 @@ namespace Yess_Express___Desktop_App
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(8, 4);
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label16.Location = new System.Drawing.Point(3, -1);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 20);
+            this.label16.Size = new System.Drawing.Size(152, 25);
             this.label16.TabIndex = 1;
             this.label16.Text = "Receiver\'s Name";
             // 
@@ -810,10 +835,11 @@ namespace Yess_Express___Desktop_App
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.DarkOrange;
             this.label13.Location = new System.Drawing.Point(404, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 20);
+            this.label13.Size = new System.Drawing.Size(111, 20);
             this.label13.TabIndex = 1;
             this.label13.Text = "Date and Time";
             // 
@@ -829,10 +855,11 @@ namespace Yess_Express___Desktop_App
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(3, 6);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label12.Location = new System.Drawing.Point(10, -3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 20);
+            this.label12.Size = new System.Drawing.Size(184, 25);
             this.label12.TabIndex = 1;
             this.label12.Text = "Receiver\'s Signature";
             // 
@@ -857,10 +884,11 @@ namespace Yess_Express___Desktop_App
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(10, 4);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label9.Location = new System.Drawing.Point(8, -1);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(202, 20);
+            this.label9.Size = new System.Drawing.Size(257, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Company Name and Address";
             // 
@@ -887,10 +915,11 @@ namespace Yess_Express___Desktop_App
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.DarkOrange;
             this.label7.Location = new System.Drawing.Point(404, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 20);
+            this.label7.Size = new System.Drawing.Size(66, 25);
             this.label7.TabIndex = 1;
             this.label7.Text = "Phone";
             // 
@@ -915,10 +944,11 @@ namespace Yess_Express___Desktop_App
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.DarkOrange;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 20);
+            this.label6.Size = new System.Drawing.Size(140, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Contact Person";
             // 
@@ -1078,7 +1108,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dateTimePickerReceivedDateTime;
-        private System.Windows.Forms.TextBox textBoxReceiverOnExpress;
         private System.Windows.Forms.TextBox textBoxReceiverName;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label25;
@@ -1110,5 +1139,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.TextBox textBoxConsigneeTIN;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.ComboBox comboBoxYesExpressReceiver;
     }
 }

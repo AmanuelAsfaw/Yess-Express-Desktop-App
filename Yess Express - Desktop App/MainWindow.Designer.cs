@@ -36,6 +36,7 @@ namespace Yess_Express___Desktop_App
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonNewBill = new System.Windows.Forms.Button();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonEmployee);
             this.panel2.Controls.Add(this.buttonReport);
             this.panel2.Controls.Add(this.buttonSettings);
             this.panel2.Controls.Add(this.buttonSearch);
@@ -105,6 +107,17 @@ namespace Yess_Express___Desktop_App
             this.buttonNewBill.UseVisualStyleBackColor = true;
             this.buttonNewBill.Click += new System.EventHandler(this.buttonNewBill_Click);
             // 
+            // buttonEmployee
+            // 
+            this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonEmployee.Location = new System.Drawing.Point(432, 17);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(84, 30);
+            this.buttonEmployee.TabIndex = 4;
+            this.buttonEmployee.Text = "Employee";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -130,5 +143,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonNewBill;
         private System.Windows.Forms.Button buttonReport;
+        private System.Windows.Forms.Button buttonEmployee;
     }
 }

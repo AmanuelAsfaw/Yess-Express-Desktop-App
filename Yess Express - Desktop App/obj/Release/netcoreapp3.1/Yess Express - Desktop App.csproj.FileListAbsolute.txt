@@ -37,3 +37,5 @@ C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop Ap
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.dll
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.pdb
 C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.genruntimeconfig.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess Express - Desktop App.csproj.AssemblyReference.cache
+C:\Users\Amanu\source\repos\Yess Express - Desktop App\Yess Express - Desktop App\obj\Release\netcoreapp3.1\Yess_Express___Desktop_App.EmployeeView.resources

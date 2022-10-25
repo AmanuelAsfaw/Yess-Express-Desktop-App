@@ -33,9 +33,10 @@ namespace Yess_Express___Desktop_App
         {
             string searchKey = textBoxSearch.Text;
             if (textBoxSearch.Text != null && textBoxSearch.Text.Length > 2) {
-                string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey+ "%' OR Phone like '%"+searchKey+
-                    "%' OR CompanyNamdeAddress like '%" + searchKey+ "%' OR consignee_phone like '" + searchKey + "'Senders.ShiiperTIN'" + searchKey + "'ConsigneeTIN'" + searchKey +
-                    "' OR consignee_contact_person like '" +searchKey+ "' OR consignee_company_name_address like '"+searchKey+"';";
+                string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey + "%' OR Senders.ShipperTIN like'%" + searchKey+ "1%' OR Senders.Phone like '%" + searchKey+
+                    "2%' OR Senders.CompanyNamdeAddress like '%" + searchKey+ "3%' OR Bills.consignee_phone like '%" + searchKey + "4%' OR Bills.ConsigneeTIN like'%" + searchKey +
+                    "5%' OR Bills.consignee_contact_person like '%" + searchKey+ "6%' OR Bills.consignee_company_name_address like '%" + searchKey+"7%';";
+                MessageBox.Show(query);
                 LoadWithQuery(query);
             }
         }
@@ -127,7 +128,7 @@ namespace Yess_Express___Desktop_App
                             {
                                 autoCompleteStringCollection.Add(read.GetValue(1).ToString());
                             }
-                            MessageBox.Show(autoCompleteStringCollection.Count.ToString());
+
                             textBoxSearch.AutoCompleteMode = AutoCompleteMode.Suggest;
                             textBoxSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
                             textBoxSearch.AutoCompleteCustomSource = autoCompleteStringCollection; 

@@ -91,7 +91,6 @@ namespace Yess_Express___Desktop_App
             this.labelConsigneePhone = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.labelReceiverName = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
@@ -810,23 +809,11 @@ namespace Yess_Express___Desktop_App
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.labelReceiverName);
             this.panel11.Controls.Add(this.label32);
             this.panel11.Location = new System.Drawing.Point(534, 528);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(251, 57);
             this.panel11.TabIndex = 13;
-            // 
-            // labelReceiverName
-            // 
-            this.labelReceiverName.AutoSize = true;
-            this.labelReceiverName.BackColor = System.Drawing.Color.Transparent;
-            this.labelReceiverName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelReceiverName.Location = new System.Drawing.Point(7, 22);
-            this.labelReceiverName.Name = "labelReceiverName";
-            this.labelReceiverName.Size = new System.Drawing.Size(21, 28);
-            this.labelReceiverName.TabIndex = 1;
-            this.labelReceiverName.Text = "?";
             // 
             // label32
             // 
@@ -1247,7 +1234,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label labelConsigneeCompanyName;
         private System.Windows.Forms.Label labelSpecialInstructions;
         private System.Windows.Forms.Label labelServiceType;
-        private System.Windows.Forms.Label labelReceiverName;
         private System.Windows.Forms.Label labelPaymentMethod;
         private System.Windows.Forms.Label labelAmountReceived;
         private System.Windows.Forms.Label labelDescriptionOfGoods;

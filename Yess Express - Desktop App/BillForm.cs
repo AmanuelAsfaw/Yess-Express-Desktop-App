@@ -9,6 +9,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Configuration;
 using System.Collections.Specialized;
+using System.Collections;
 
 namespace Yess_Express___Desktop_App
 {
@@ -26,7 +27,7 @@ namespace Yess_Express___Desktop_App
             textBoxNameOfSender.Text = billModel.SenderName;
             textBoxSenderPhone.Text = billModel.SenderPhone;
             textBoxSenderCompanyNameAndAddress.Text = billModel.SenderCompanyNameAndAddress;
-            textBoxReceiverOnExpress.Text = billModel.YesExpressReceiver;
+            comboBoxYesExpressReceiver.Text = billModel.YesExpressReceiver;
             textBoxKillo.Text = billModel.ItemKillo.ToString();
             textBoxGram.Text = billModel.ItemGram.ToString();
             textBoxLength.Text = billModel.ItemLength.ToString();
@@ -43,6 +44,8 @@ namespace Yess_Express___Desktop_App
             textBoxAmountReceived.Text = billModel.AmountReceived.ToString();
             comboBoxPaymentMethod.Text = billModel.PaymentMethod;
             textBoxSpecialInstructions.Text = billModel.SpecialInstructions;
+            textBoxShipperTIN.Text = billModel.ShipperTIN;
+            textBoxConsigneeTIN.Text = billModel.ConsigneeTIN;
         }
 
         public BillForm(MainWindow mainWindow)
@@ -62,6 +65,7 @@ namespace Yess_Express___Desktop_App
             textBoxTrackingNo.Enabled = false;
             timePickerReceivedTime.ShowUpDown = true;
             timePickerReceiverConsignee.ShowUpDown = true;
+            LoadEmployee("SELECT * FROM Employees;");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -189,7 +193,7 @@ namespace Yess_Express___Desktop_App
                         
                         string bill_query = "insert into Bills (tracking_no,sender_id, shipper_signed_date, yes_express_receiver, yes_express_received_datetime, item_killo, item_gram, item_length, item_width, " +
                             "item_height, item_volum, description_of_goods, consignee_contact_person,consignee_phone, consignee_company_name_address, consignee_received_datatime, receiver_name, service_type, amount_received, payment_method, special_instructions, ConsigneeTIN) values(" +
-                            current_tracking_no + ",'" + LastRowID.ToString() + "','" + dateTimePickerShiipperDate.Value.ToString("dd-MMM-yyyy") + "','" + textBoxReceiverOnExpress.Text + "','" + dateTimePickerReceivedDateTime.Value.ToString("dd-MMM-yyyy") + " : " + timePickerReceivedTime.Text + "'," +
+                            current_tracking_no + ",'" + LastRowID.ToString() + "','" + dateTimePickerShiipperDate.Value.ToString("dd-MMM-yyyy") + "','" + comboBoxYesExpressReceiver.Text + "','" + dateTimePickerReceivedDateTime.Value.ToString("dd-MMM-yyyy") + " : " + timePickerReceivedTime.Text + "'," +
                             Double.Parse(textBoxKillo.Text) + "," + Double.Parse(textBoxGram.Text) + "," + Double.Parse(textBoxLength.Text) + "," + Double.Parse(textBoxWidth.Text) + "," + Double.Parse(textBoxHeight.Text) + "," + Double.Parse(labelForVolum.Text) + ",'" + textBoxGoodsDescription.Text + "','" +
                             textBoxReceiverContactPerson.Text + "','" + textBoxReceiverPhone.Text + "','" + textBoxReceiverCompanyNameAndAddress.Text + "','" + dateTimePickerReceiverConsignee.Value.Date.ToString("dd/MM/yyyy") + " : " + timePickerReceiverConsignee.Text + "','" + textBoxReceiverName.Text + "','" + comboBoxServiceType.Text + "'," + Double.Parse(textBoxAmountReceived.Text) + ",'" +
                             comboBoxPaymentMethod.Text + "','" + textBoxSpecialInstructions.Text + "','" + textBoxConsigneeTIN.Text + "')";
@@ -210,7 +214,7 @@ namespace Yess_Express___Desktop_App
                 printView.senderPhone = textBoxSenderPhone.Text;
                 printView.senderCompanyNameAndAddress = textBoxSenderCompanyNameAndAddress.Text;
                 printView.senderSendDate = dateTimePickerShiipperDate.Value.ToString("dd-MMM-yyyy");
-                printView.yesExpressReceivedPerson = textBoxReceiverOnExpress.Text;
+                printView.yesExpressReceivedPerson = comboBoxYesExpressReceiver.Text;
                 printView.yesExpressReceivedDateTime = dateTimePickerReceivedDateTime.Value.ToString("dd-MMM-yyyy") + " : "+ timePickerReceivedTime.Text;
                 printView.killo = textBoxKillo.Text;
                 printView.gram = textBoxGram.Text;
@@ -338,5 +342,32 @@ namespace Yess_Express___Desktop_App
             }
         }
 
+        private void LoadEmployee(string query)
+        {
+            ArrayList employees = new ArrayList();
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=NewDatabase.db;"))
+                {
+                    conn.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        using (SQLiteDataReader read = cmd.ExecuteReader())
+                        {
+                            while (read.Read())
+                            {
+                                employees.Add(read.GetValue(1).ToString());
+                            }
+                        }
+
+                    }
+                }
+                comboBoxYesExpressReceiver.DataSource = employees;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -45,6 +45,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonReport.Enabled = true;
             }
+            else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
+            {
+                buttonEmployee.Enabled = true;
+            }
             buttonSettings.Enabled = false;
             currentFormName = "SettingsForm";
             SettingsForm settingsForm = new SettingsForm();
@@ -80,6 +84,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonReport.Enabled = true;
             }
+            else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
+            {
+                buttonEmployee.Enabled = true;
+            }
             buttonSearch.Enabled = false;
             currentFormName = "SearchView";
             SearchView searchView = new SearchView(this);
@@ -99,6 +107,10 @@ namespace Yess_Express___Desktop_App
             else if (currentFormName == "ReportView" && !buttonReport.Enabled)
             {
                 buttonReport.Enabled = true;
+            }
+            else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
+            {
+                buttonEmployee.Enabled = true;
             }
             buttonNewBill.Enabled = false;
             currentFormName = "BillForm";
@@ -147,6 +159,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonNewBill.Enabled = true;
             }
+            else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
+            {
+                buttonEmployee.Enabled = true;
+            }
             buttonReport.Enabled = false;
             currentFormName = "ReportView";
             ReportView reportView = new ReportView();
@@ -156,6 +172,34 @@ namespace Yess_Express___Desktop_App
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "SettingsForm" && !buttonSettings.Enabled)
+            {
+                buttonSettings.Enabled = true;
+            }
+            else if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "BillForm" && !buttonNewBill.Enabled)
+            {
+                buttonNewBill.Enabled = true;
+            }
+            else if (currentFormName == "ReportView" && !buttonReport.Enabled)
+            {
+                buttonReport.Enabled = true;
+            }
+            buttonEmployee.Enabled = false;
+            currentFormName = "EmployeeView";
+            EmployeeView employeeView = new EmployeeView();
+            FormLoad(employeeView);
         }
     }
 }

@@ -121,7 +121,6 @@ namespace Yess_Express___Desktop_App
             labelConsigneeContactPerson.Text = consigneePerson;
             labelConsigneePhone.Text = consigneePhone;
             labelConsigneeCompanyName.Text = consigneeCompanyNameAndAddress;
-            labelReceiverName.Text = receiverName;
             labelServiceType.Text = receiverServiceType;
             labelAmountReceived.Text = amountReceived;
             labelPaymentMethod.Text = paymentMethod;
