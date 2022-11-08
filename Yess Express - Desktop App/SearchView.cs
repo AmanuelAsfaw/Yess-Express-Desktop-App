@@ -36,7 +36,7 @@ namespace Yess_Express___Desktop_App
                 string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey + "%' OR Senders.ShipperTIN like'%" + searchKey+ "1%' OR Senders.Phone like '%" + searchKey+
                     "2%' OR Senders.CompanyNamdeAddress like '%" + searchKey+ "3%' OR Bills.consignee_phone like '%" + searchKey + "4%' OR Bills.ConsigneeTIN like'%" + searchKey +
                     "5%' OR Bills.consignee_contact_person like '%" + searchKey+ "6%' OR Bills.consignee_company_name_address like '%" + searchKey+"7%';";
-                MessageBox.Show(query);
+               
                 LoadWithQuery(query);
             }
         }
@@ -63,21 +63,23 @@ namespace Yess_Express___Desktop_App
                                 Button print_button = new Button();
                                 print_button.Text = "Print";
                                 billList.Add(new BillModel(
-                                    int.Parse(read.GetValue(0).ToString()), read.GetValue(1).ToString(), int.Parse(read.GetValue(2).ToString()), read.GetValue(25).ToString(), read.GetValue(26).ToString(), read.GetValue(27).ToString(), 
+                                    int.Parse(read.GetValue(0).ToString()), read.GetValue(1).ToString(), int.Parse(read.GetValue(2).ToString()), read.GetValue(26).ToString(), read.GetValue(27).ToString(), read.GetValue(28).ToString(), 
                                     read.GetValue(3).ToString(), read.GetValue(4).ToString(), read.GetValue(5).ToString(), Double.Parse(read.GetValue(6).ToString()), Double.Parse(read.GetValue(7).ToString()),
                                     Double.Parse(read.GetValue(8).ToString()), Double.Parse(read.GetValue(9).ToString()), Double.Parse(read.GetValue(10).ToString()), Double.Parse(read.GetValue(11).ToString()),read.GetValue(12).ToString(), read.GetValue(13).ToString(),
                                     read.GetValue(14).ToString(), read.GetValue(15).ToString(), read.GetValue(16).ToString(), read.GetValue(17).ToString(),
-                                    read.GetValue(18).ToString(), int.Parse(read.GetValue(19).ToString()), read.GetValue(20).ToString(), read.GetValue(21).ToString(), read.GetValue(28).ToString(), read.GetValue(22).ToString()));
+                                    read.GetValue(18).ToString(), Double.Parse(read.GetValue(19).ToString()), read.GetValue(20).ToString(), read.GetValue(21).ToString(), read.GetValue(29).ToString(),
+                                    read.GetValue(22).ToString(), read.GetValue(30).ToString(), read.GetValue(23).ToString()));
 
                                 int rowIndex = dataGridViewSearchResult.Rows.Add(new object[]
                                 {
                                     print_button,
                                     use_button,
                                     read.GetValue(1), // Tracking No
-                                    read.GetValue(25), // Sender-Name
-                                    read.GetValue(26), // Sender-Phone
-                                    read.GetValue(28), // Shipper-TIN
-                                    read.GetValue(27), // Sender-Company
+                                    read.GetValue(26), // Sender-Name
+                                    read.GetValue(27), // Sender-Phone
+                                    read.GetValue(29), // Shipper-TIN
+                                    read.GetValue(28), // Sender-Company
+                                    read.GetValue(30), // Sender-Country
                                     read.GetValue(4), // YesExpress -Receiver
                                     read.GetValue(6), // Killo
                                     read.GetValue(7), // Gram
@@ -90,6 +92,7 @@ namespace Yess_Express___Desktop_App
                                     read.GetValue(14), // Consignee Phone
                                     read.GetValue(22), // Consignee TIN
                                     read.GetValue(15), // Consignee Compny
+                                    read.GetValue(23), // Consignee Country
                                     read.GetValue(17), // Receiver
                                     read.GetValue(18), // Service Type
                                     read.GetValue(19), // Amount Received
@@ -163,7 +166,8 @@ namespace Yess_Express___Desktop_App
                         billList[row_index].ItemVolum, billList[row_index].DescriptionOfGoods, billList[row_index].ConsigneeContactPerson,
                         billList[row_index].ConsigneePhone, billList[row_index].ConsigneeCompanyNameAndAddress, billList[row_index].ConsigneeReceivedDateTime,
                         billList[row_index].ReceiverName, billList[row_index].ServiceType, billList[row_index].AmountReceived,
-                        billList[row_index].PaymentMethod, billList[row_index].SpecialInstructions, billList[row_index].ShipperTIN, billList[row_index].ConsigneeTIN);
+                        billList[row_index].PaymentMethod, billList[row_index].SpecialInstructions, billList[row_index].ShipperTIN, 
+                        billList[row_index].ConsigneeTIN, billList[row_index].SenderCountry, billList[row_index].Country);
                     BillForm billForm = new BillForm(this.rootWindow, billModel);
                     this.rootWindow.change_to_new_bill_form(billForm);
                 } catch { }
@@ -198,6 +202,8 @@ namespace Yess_Express___Desktop_App
                     printView.specialInstruction = billList[row_index].SpecialInstructions.ToString();
                     printView.shipper_tin = billList[row_index].ShipperTIN.ToString();
                     printView.consignee_tin = billList[row_index].ConsigneeTIN.ToString();
+                    printView.sender_country = billList[row_index].SenderCountry.ToString();
+                    printView.country = billList[row_index].Country.ToString();
                     this.rootWindow.change_to_print_view(printView);
                 }
                 catch { }

@@ -13,7 +13,7 @@ namespace Yess_Express___Desktop_App
     public partial class PrintView : Form
     {
         public string senderName, senderPhone, senderCompanyNameAndAddress, senderSendDate, yesExpressReceivedPerson, yesExpressReceivedDateTime, descriptionOfGoods, killo, gram, shipmentLength, shipmentWidth, shipmentHeight, shipmentVolume,
-                consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no, shipper_tin, consignee_tin;
+                consigneePerson, consigneePhone, consigneeCompanyNameAndAddress, receivedDateTime, receiverName, receiverServiceType, amountReceived, specialInstruction, paymentMethod, tracking_no, shipper_tin, consignee_tin, sender_country, country;
 
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -127,6 +127,8 @@ namespace Yess_Express___Desktop_App
             labelSpecialInstructions.Text = specialInstruction;
             labelShipperTIN.Text = shipper_tin;
             labelConsigneeTIN.Text = consignee_tin;
+            labelSenderCountry.Text = sender_country;
+            labelCountry.Text = country;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

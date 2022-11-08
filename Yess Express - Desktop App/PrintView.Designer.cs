@@ -119,6 +119,8 @@ namespace Yess_Express___Desktop_App
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.labelSenderCountry = new System.Windows.Forms.Label();
+            this.labelCountry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panelPrint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -564,6 +566,7 @@ namespace Yess_Express___Desktop_App
             // panelSenderCompanyName
             // 
             this.panelSenderCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSenderCompanyName.Controls.Add(this.labelSenderCountry);
             this.panelSenderCompanyName.Controls.Add(this.panel17);
             this.panelSenderCompanyName.Controls.Add(this.labelSenderCompanyName);
             this.panelSenderCompanyName.Controls.Add(this.label12);
@@ -849,6 +852,7 @@ namespace Yess_Express___Desktop_App
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.labelCountry);
             this.panel8.Controls.Add(this.panel24);
             this.panel8.Controls.Add(this.labelConsigneeCompanyName);
             this.panel8.Controls.Add(this.label11);
@@ -1099,6 +1103,28 @@ namespace Yess_Express___Desktop_App
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // labelSenderCountry
+            // 
+            this.labelSenderCountry.AutoSize = true;
+            this.labelSenderCountry.BackColor = System.Drawing.Color.Transparent;
+            this.labelSenderCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSenderCountry.Location = new System.Drawing.Point(6, 80);
+            this.labelSenderCountry.Name = "labelSenderCountry";
+            this.labelSenderCountry.Size = new System.Drawing.Size(21, 28);
+            this.labelSenderCountry.TabIndex = 3;
+            this.labelSenderCountry.Text = "?";
+            // 
+            // labelCountry
+            // 
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.BackColor = System.Drawing.Color.Transparent;
+            this.labelCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCountry.Location = new System.Drawing.Point(7, 80);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(21, 28);
+            this.labelCountry.TabIndex = 4;
+            this.labelCountry.Text = "?";
+            // 
             // PrintView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1256,5 +1282,7 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label labelConsigneeTIN;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelSenderCountry;
+        private System.Windows.Forms.Label labelCountry;
     }
 }

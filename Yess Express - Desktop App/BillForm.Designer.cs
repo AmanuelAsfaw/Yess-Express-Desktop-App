@@ -64,6 +64,8 @@ namespace Yess_Express___Desktop_App
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.textBoxSenderCountry = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.textBoxSenderCompanyNameAndAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -100,6 +102,8 @@ namespace Yess_Express___Desktop_App
             this.panel19 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxCountry = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.textBoxReceiverCompanyNameAndAddress = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -485,19 +489,40 @@ namespace Yess_Express___Desktop_App
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.textBoxSenderCountry);
+            this.panel8.Controls.Add(this.label31);
             this.panel8.Controls.Add(this.textBoxSenderCompanyNameAndAddress);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Location = new System.Drawing.Point(-1, 151);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(700, 107);
+            this.panel8.Size = new System.Drawing.Size(700, 111);
             this.panel8.TabIndex = 2;
+            // 
+            // textBoxSenderCountry
+            // 
+            this.textBoxSenderCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSenderCountry.Location = new System.Drawing.Point(135, 79);
+            this.textBoxSenderCountry.Name = "textBoxSenderCountry";
+            this.textBoxSenderCountry.Size = new System.Drawing.Size(265, 27);
+            this.textBoxSenderCountry.TabIndex = 3;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label31.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label31.Location = new System.Drawing.Point(7, 76);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(122, 25);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Country/City";
             // 
             // textBoxSenderCompanyNameAndAddress
             // 
             this.textBoxSenderCompanyNameAndAddress.Location = new System.Drawing.Point(3, 27);
             this.textBoxSenderCompanyNameAndAddress.Multiline = true;
             this.textBoxSenderCompanyNameAndAddress.Name = "textBoxSenderCompanyNameAndAddress";
-            this.textBoxSenderCompanyNameAndAddress.Size = new System.Drawing.Size(692, 79);
+            this.textBoxSenderCompanyNameAndAddress.Size = new System.Drawing.Size(692, 46);
             this.textBoxSenderCompanyNameAndAddress.TabIndex = 1;
             // 
             // label8
@@ -866,6 +891,8 @@ namespace Yess_Express___Desktop_App
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.textBoxCountry);
+            this.panel9.Controls.Add(this.label33);
             this.panel9.Controls.Add(this.textBoxReceiverCompanyNameAndAddress);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Location = new System.Drawing.Point(-1, 151);
@@ -873,12 +900,31 @@ namespace Yess_Express___Desktop_App
             this.panel9.Size = new System.Drawing.Size(752, 113);
             this.panel9.TabIndex = 2;
             // 
+            // textBoxCountry
+            // 
+            this.textBoxCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCountry.Location = new System.Drawing.Point(136, 79);
+            this.textBoxCountry.Name = "textBoxCountry";
+            this.textBoxCountry.Size = new System.Drawing.Size(291, 27);
+            this.textBoxCountry.TabIndex = 4;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label33.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label33.Location = new System.Drawing.Point(8, 76);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(122, 25);
+            this.label33.TabIndex = 3;
+            this.label33.Text = "Country/City";
+            // 
             // textBoxReceiverCompanyNameAndAddress
             // 
             this.textBoxReceiverCompanyNameAndAddress.Location = new System.Drawing.Point(3, 27);
             this.textBoxReceiverCompanyNameAndAddress.Multiline = true;
             this.textBoxReceiverCompanyNameAndAddress.Name = "textBoxReceiverCompanyNameAndAddress";
-            this.textBoxReceiverCompanyNameAndAddress.Size = new System.Drawing.Size(744, 79);
+            this.textBoxReceiverCompanyNameAndAddress.Size = new System.Drawing.Size(744, 46);
             this.textBoxReceiverCompanyNameAndAddress.TabIndex = 2;
             // 
             // label9
@@ -1140,5 +1186,9 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.ComboBox comboBoxYesExpressReceiver;
+        private System.Windows.Forms.TextBox textBoxSenderCountry;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBoxCountry;
     }
 }
