@@ -32,11 +32,12 @@ namespace Yess_Express___Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonNewBill = new System.Windows.Forms.Button();
-            this.buttonEmployee = new System.Windows.Forms.Button();
+            this.buttonEmptyBill = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@ namespace Yess_Express___Desktop_App
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonEmptyBill);
             this.panel2.Controls.Add(this.buttonEmployee);
             this.panel2.Controls.Add(this.buttonReport);
             this.panel2.Controls.Add(this.buttonSettings);
@@ -62,6 +64,17 @@ namespace Yess_Express___Desktop_App
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1548, 55);
             this.panel2.TabIndex = 1;
+            // 
+            // buttonEmployee
+            // 
+            this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonEmployee.Location = new System.Drawing.Point(432, 17);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(84, 30);
+            this.buttonEmployee.TabIndex = 4;
+            this.buttonEmployee.Text = "Employee";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // buttonReport
             // 
@@ -107,16 +120,16 @@ namespace Yess_Express___Desktop_App
             this.buttonNewBill.UseVisualStyleBackColor = true;
             this.buttonNewBill.Click += new System.EventHandler(this.buttonNewBill_Click);
             // 
-            // buttonEmployee
+            // buttonEmptyBill
             // 
-            this.buttonEmployee.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonEmployee.Location = new System.Drawing.Point(432, 17);
-            this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(84, 30);
-            this.buttonEmployee.TabIndex = 4;
-            this.buttonEmployee.Text = "Employee";
-            this.buttonEmployee.UseVisualStyleBackColor = true;
-            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
+            this.buttonEmptyBill.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonEmptyBill.Location = new System.Drawing.Point(534, 17);
+            this.buttonEmptyBill.Name = "buttonEmptyBill";
+            this.buttonEmptyBill.Size = new System.Drawing.Size(104, 30);
+            this.buttonEmptyBill.TabIndex = 5;
+            this.buttonEmptyBill.Text = "Empty Bill";
+            this.buttonEmptyBill.UseVisualStyleBackColor = true;
+            this.buttonEmptyBill.Click += new System.EventHandler(this.buttonEmptyBill_Click);
             // 
             // MainWindow
             // 
@@ -144,5 +157,6 @@ namespace Yess_Express___Desktop_App
         private System.Windows.Forms.Button buttonNewBill;
         private System.Windows.Forms.Button buttonReport;
         private System.Windows.Forms.Button buttonEmployee;
+        private System.Windows.Forms.Button buttonEmptyBill;
     }
 }

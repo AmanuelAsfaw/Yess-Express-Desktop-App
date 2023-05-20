@@ -68,6 +68,7 @@ namespace Yess_Express___Desktop_App
             this.panel18 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.panelSenderCompanyName = new System.Windows.Forms.Panel();
+            this.labelSenderCountry = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.labelShipperTIN = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -95,6 +96,7 @@ namespace Yess_Express___Desktop_App
             this.panel10 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.labelCountry = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.labelConsigneeTIN = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -119,8 +121,6 @@ namespace Yess_Express___Desktop_App
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.labelSenderCountry = new System.Windows.Forms.Label();
-            this.labelCountry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panelPrint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -152,6 +152,7 @@ namespace Yess_Express___Desktop_App
             // 
             // panelPrint
             // 
+            this.panelPrint.BackColor = System.Drawing.Color.White;
             this.panelPrint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPrint.Controls.Add(this.pictureBox2);
             this.panelPrint.Controls.Add(this.checkBox4);
@@ -575,6 +576,17 @@ namespace Yess_Express___Desktop_App
             this.panelSenderCompanyName.Size = new System.Drawing.Size(508, 111);
             this.panelSenderCompanyName.TabIndex = 19;
             // 
+            // labelSenderCountry
+            // 
+            this.labelSenderCountry.AutoSize = true;
+            this.labelSenderCountry.BackColor = System.Drawing.Color.Transparent;
+            this.labelSenderCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSenderCountry.Location = new System.Drawing.Point(6, 80);
+            this.labelSenderCountry.Name = "labelSenderCountry";
+            this.labelSenderCountry.Size = new System.Drawing.Size(21, 28);
+            this.labelSenderCountry.TabIndex = 3;
+            this.labelSenderCountry.Text = "?";
+            // 
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -861,6 +873,17 @@ namespace Yess_Express___Desktop_App
             this.panel8.Size = new System.Drawing.Size(497, 111);
             this.panel8.TabIndex = 10;
             // 
+            // labelCountry
+            // 
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.BackColor = System.Drawing.Color.Transparent;
+            this.labelCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCountry.Location = new System.Drawing.Point(7, 80);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(21, 28);
+            this.labelCountry.TabIndex = 4;
+            this.labelCountry.Text = "?";
+            // 
             // panel24
             // 
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1103,34 +1126,13 @@ namespace Yess_Express___Desktop_App
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // labelSenderCountry
-            // 
-            this.labelSenderCountry.AutoSize = true;
-            this.labelSenderCountry.BackColor = System.Drawing.Color.Transparent;
-            this.labelSenderCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSenderCountry.Location = new System.Drawing.Point(6, 80);
-            this.labelSenderCountry.Name = "labelSenderCountry";
-            this.labelSenderCountry.Size = new System.Drawing.Size(21, 28);
-            this.labelSenderCountry.TabIndex = 3;
-            this.labelSenderCountry.Text = "?";
-            // 
-            // labelCountry
-            // 
-            this.labelCountry.AutoSize = true;
-            this.labelCountry.BackColor = System.Drawing.Color.Transparent;
-            this.labelCountry.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelCountry.Location = new System.Drawing.Point(7, 80);
-            this.labelCountry.Name = "labelCountry";
-            this.labelCountry.Size = new System.Drawing.Size(21, 28);
-            this.labelCountry.TabIndex = 4;
-            this.labelCountry.Text = "?";
-            // 
             // PrintView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1493, 951);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelPrint);

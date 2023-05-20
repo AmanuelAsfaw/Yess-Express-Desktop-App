@@ -49,6 +49,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonEmployee.Enabled = true;
             }
+            else if (currentFormName == "EmptyBill" && !buttonEmptyBill.Enabled)
+            {
+                buttonEmptyBill.Enabled = true;
+            }
             buttonSettings.Enabled = false;
             currentFormName = "SettingsForm";
             SettingsForm settingsForm = new SettingsForm();
@@ -88,6 +92,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonEmployee.Enabled = true;
             }
+            else if (currentFormName == "EmptyBill" && !buttonEmptyBill.Enabled)
+            {
+                buttonEmptyBill.Enabled = true;
+            }
             buttonSearch.Enabled = false;
             currentFormName = "SearchView";
             SearchView searchView = new SearchView(this);
@@ -111,6 +119,10 @@ namespace Yess_Express___Desktop_App
             else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
             {
                 buttonEmployee.Enabled = true;
+            }
+            else if (currentFormName == "EmptyBill" && !buttonEmptyBill.Enabled)
+            {
+                buttonEmptyBill.Enabled = true;
             }
             buttonNewBill.Enabled = false;
             currentFormName = "BillForm";
@@ -163,6 +175,10 @@ namespace Yess_Express___Desktop_App
             {
                 buttonEmployee.Enabled = true;
             }
+            else if (currentFormName == "EmptyBill" && !buttonEmptyBill.Enabled)
+            {
+                buttonEmptyBill.Enabled = true;
+            }
             buttonReport.Enabled = false;
             currentFormName = "ReportView";
             ReportView reportView = new ReportView();
@@ -196,10 +212,47 @@ namespace Yess_Express___Desktop_App
             {
                 buttonReport.Enabled = true;
             }
+            else if (currentFormName == "EmptyBill" && !buttonEmptyBill.Enabled)
+            {
+                buttonEmptyBill.Enabled = true;
+            }
             buttonEmployee.Enabled = false;
             currentFormName = "EmployeeView";
             EmployeeView employeeView = new EmployeeView();
             FormLoad(employeeView);
+        }
+
+        private void buttonEmptyBill_Click(object sender, EventArgs e)
+        {
+
+            if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "SettingsForm" && !buttonSettings.Enabled)
+            {
+                buttonSettings.Enabled = true;
+            }
+            else if (currentFormName == "SearchView" && !buttonSearch.Enabled)
+            {
+                buttonSearch.Enabled = true;
+            }
+            else if (currentFormName == "BillForm" && !buttonNewBill.Enabled)
+            {
+                buttonNewBill.Enabled = true;
+            }
+            else if (currentFormName == "ReportView" && !buttonReport.Enabled)
+            {
+                buttonReport.Enabled = true;
+            }
+            else if (currentFormName == "EmployeeView" && !buttonEmployee.Enabled)
+            {
+                buttonEmployee.Enabled = true;
+            }
+            buttonEmptyBill.Enabled = false;
+            currentFormName = "EmptyBill";
+            PrintView printView = new PrintView();
+            FormLoad(printView);
         }
     }
 }

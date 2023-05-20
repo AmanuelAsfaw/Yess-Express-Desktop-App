@@ -22,7 +22,8 @@ namespace Yess_Express___Desktop_App
             {
                 CreateDB();
             }
-            Application.Run(new MainWindow());
+            Application.Run(new LoginForm());
+            // Application.Run(new MainWindow());
         }
         public static void CreateDB() {
             try

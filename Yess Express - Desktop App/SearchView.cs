@@ -33,9 +33,9 @@ namespace Yess_Express___Desktop_App
         {
             string searchKey = textBoxSearch.Text;
             if (textBoxSearch.Text != null && textBoxSearch.Text.Length > 2) {
-                string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey + "%' OR Senders.ShipperTIN like'%" + searchKey+ "1%' OR Senders.Phone like '%" + searchKey+
-                    "2%' OR Senders.CompanyNamdeAddress like '%" + searchKey+ "3%' OR Bills.consignee_phone like '%" + searchKey + "4%' OR Bills.ConsigneeTIN like'%" + searchKey +
-                    "5%' OR Bills.consignee_contact_person like '%" + searchKey+ "6%' OR Bills.consignee_company_name_address like '%" + searchKey+"7%';";
+                string query = "SELECT * FROM Bills INNER JOIN Senders ON Senders.Id = Bills.sender_id WHERE Senders.Name like '%" + searchKey + "%' OR Senders.ShipperTIN like'%" + searchKey+ "%' OR Senders.Phone like '%" + searchKey+
+                    "%' OR Senders.CompanyNamdeAddress like '%" + searchKey+ "%' OR Bills.consignee_phone like '%" + searchKey + "%' OR Bills.ConsigneeTIN like'%" + searchKey +
+                    "%' OR Bills.consignee_contact_person like '%" + searchKey+ "%' OR Bills.consignee_company_name_address like '%" + searchKey+"%';";
                
                 LoadWithQuery(query);
             }
