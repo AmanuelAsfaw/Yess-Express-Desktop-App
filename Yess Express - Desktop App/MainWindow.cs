@@ -251,8 +251,8 @@ namespace Yess_Express___Desktop_App
             }
             buttonEmptyBill.Enabled = false;
             currentFormName = "EmptyBill";
-            PrintView printView = new PrintView();
-            FormLoad(printView);
+            PrintEmptyView printEmptyView = new PrintEmptyView();
+            FormLoad(printEmptyView);
         }
     }
 }
